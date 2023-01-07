@@ -166,7 +166,7 @@
 .floor__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 120px;
     @include media(1200){
         gap: 80px;
@@ -216,6 +216,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     @include media(768){
         margin: 0;
     }
@@ -236,16 +237,18 @@
     flex-direction: column;
     gap: 15px;
     min-width: 330px;
+    padding-top: 35px;
     @include media(992){
         align-items: center;
         gap: 5px;
+        padding-top: 0;
     }
-    @include media(768){
+    @include media(768){  
         margin-left: auto;
         margin-right: auto;
         min-width: 100px;
     }
-    @include media(575){
+    @include media(575){ 
         max-width: 320px;
         align-items: flex-start;
     }
