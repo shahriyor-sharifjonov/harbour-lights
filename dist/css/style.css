@@ -2684,9 +2684,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .bg-map__wrap {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -2704,15 +2702,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .bg-map img {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .map-nav {
@@ -4455,6 +4451,12 @@ body {
     font-size: 56px;
   }
 
+  .bg-map img {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
   .map-nav {
     padding: 0;
     top: 0;
@@ -4699,6 +4701,12 @@ body {
 
   .map-title p {
     font-size: 46px;
+  }
+
+  .bg-map__wrap {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .floor__item {
