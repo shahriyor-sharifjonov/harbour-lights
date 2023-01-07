@@ -117,6 +117,9 @@
                             font-size: 14px;
                             color: white;
                         }
+                        &:focus{
+                            box-shadow: 0px 0px 4px;
+                        }
                     }
                     .popup__lower{
                         width: 100%;
