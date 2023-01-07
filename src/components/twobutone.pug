@@ -30,13 +30,17 @@ mixin twobutone()
             p A COMFORTABLE PLACE <br />FOR LIVING
     section.map#location 
         #map1.bg-map.active
-            img(src='@img/map-all.png' alt='') 
+            .bg-map__wrap 
+                img(src='@img/map-all.png' alt='') 
         #map2.bg-map
-            img(src='@img/map-edu.png' alt='')
+            .bg-map__wrap 
+                img(src='@img/map-edu.png' alt='')
         #map3.bg-map
-            img(src='@img/map-shop.png' alt='')
+            .bg-map__wrap 
+                img(src='@img/map-shop.png' alt='')
         #map4.bg-map
-            img(src='@img/map-leisure.png' alt='')
+            .bg-map__wrap 
+                img(src='@img/map-leisure.png' alt='')
         #map-nav.map-nav 
             button.map-btn.active(data-target='#map1') 
                 span All

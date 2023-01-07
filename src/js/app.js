@@ -214,7 +214,7 @@ const autoSwiper = new Swiper(".twrSwiper", {
     type: "progressbar",
   },
   autoplay: {
-    delay: 2000,
+    delay: 2000, 
   },
 });
 
@@ -335,7 +335,7 @@ const numberClass = document.querySelectorAll(".show-number");
 numberClass?.forEach((el) => {
   el.addEventListener("click", () => {
     el.innerHTML = el.getAttribute("data-number");
-    el.style.color = "#459A77";
+    el.style.color = "#5E7390";
   });
 });
 

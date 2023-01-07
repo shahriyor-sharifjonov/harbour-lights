@@ -84,12 +84,12 @@
 
 .menu-nav__menu:hover .menu__lines div::before,
 .menu-nav__menu:hover .menu__lines div::after{
-    background-color: #459A77;
+    background-color: #5E7390;
     transition: .2s;
 }
 
 .menu-nav__menu:hover{
-    color: #459A77;
+    color: #5E7390;
     transition: .2s;
 }
 
@@ -142,8 +142,8 @@
 }
 
 .menu-nav__broshure:hover{
-    color: #459A77;
-    border-color: #459A77;
+    color: #5E7390;
+    border-color: #5E7390;
     transition: .2s;
 }
 
@@ -207,13 +207,13 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #459A77;
+    background: #5E7390;
     transition: width .2s;
     margin-top: 8px;
 }
 
 .menu-con__btn:hover, .menu-con__btn.active{
-    color: #459A77;
+    color: #5E7390;
 }
 
 .menu-con__btn.active:after{
@@ -309,7 +309,7 @@
 }
 
 .top-nav__btn:hover svg{
-    color: #459A77;
+    color: #5E7390;
 }
 
 .top-nav__btn:first-child{
@@ -363,7 +363,7 @@
 .menu__logo p{
     color: white;
     span{
-        color: #459A77;
+        color: #5E7390;
     }
 }
 
@@ -413,7 +413,7 @@
 .submit{
     width: calc(100% - 186px);
     height: 42px;
-    background-color: #459A77;
+    background-color: #5E7390;
     border: 0;
     color: white;
     cursor: pointer;
@@ -422,7 +422,7 @@
 .menu__submit{
     width: calc(100% - 124px);
     height: 42px;
-    background-color: #459A77;
+    background-color: #5E7390;
     border: 0;
     color: white;
     cursor: pointer;
@@ -481,7 +481,7 @@
 }
 
 .telegram-btn{
-    background-color: #459A77;
+    background-color: #5E7390;
 }
 
 .about-project-btn svg{

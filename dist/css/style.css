@@ -1185,14 +1185,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .menu-nav__menu:hover .menu__lines div::before,
 .menu-nav__menu:hover .menu__lines div::after {
-  background-color: #459A77;
+  background-color: #5E7390;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 
 .menu-nav__menu:hover {
-  color: #459A77;
+  color: #5E7390;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1253,8 +1253,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .menu-nav__broshure:hover {
-  color: #459A77;
-  border-color: #459A77;
+  color: #5E7390;
+  border-color: #5E7390;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1318,7 +1318,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: block;
   width: 0;
   height: 2px;
-  background: #459A77;
+  background: #5E7390;
   -webkit-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
@@ -1327,7 +1327,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .menu-con__btn:hover,
 .menu-con__btn.active {
-  color: #459A77;
+  color: #5E7390;
 }
 
 .menu-con__btn.active:after {
@@ -1445,7 +1445,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .top-nav__btn:hover svg {
-  color: #459A77;
+  color: #5E7390;
 }
 
 .top-nav__btn:first-child {
@@ -1511,7 +1511,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .menu__logo p span {
-  color: #459A77;
+  color: #5E7390;
 }
 
 .menu__logo img {
@@ -1580,7 +1580,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .submit {
   width: calc(100% - 186px);
   height: 42px;
-  background-color: #459A77;
+  background-color: #5E7390;
   border: 0;
   color: white;
   cursor: pointer;
@@ -1589,7 +1589,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .menu__submit {
   width: calc(100% - 124px);
   height: 42px;
-  background-color: #459A77;
+  background-color: #5E7390;
   border: 0;
   color: white;
   cursor: pointer;
@@ -1708,7 +1708,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .telegram-btn {
-  background-color: #459A77;
+  background-color: #5E7390;
 }
 
 .about-project-btn svg {
@@ -1867,13 +1867,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 #swiper-mobile .learn-more__block p span {
-  color: #459A77;
+  color: #5E7390;
   white-space: nowrap;
   font-family: "Tenor Sans", sans-serif;
 }
 
 #swiper-mobile .learn-more__block button {
-  background-color: #459A77;
+  background-color: #5E7390;
   padding: 10px 30px;
   outline: none;
   border: 0;
@@ -1937,7 +1937,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  color: #459A77;
+  color: #5E7390;
   font-size: 20px !important;
   font-weight: bold;
 }
@@ -1988,7 +1988,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .learn-more-span {
-  color: #459A77;
+  color: #5E7390;
   white-space: nowrap;
 }
 
@@ -2019,7 +2019,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  background-color: #459A77;
+  background-color: #5E7390;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -2137,7 +2137,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .places-pic-box {
   width: calc(50% - 15px);
   height: 600px;
-  border-bottom: 2px solid #459A77;
+  border-bottom: 2px solid #5E7390;
   margin-top: 40px;
   padding-bottom: 20px;
   cursor: default;
@@ -2203,8 +2203,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .broshure:hover {
-  background-color: #459A77;
-  border: 1px solid #459A77;
+  background-color: #5E7390;
+  border: 1px solid #5E7390;
 }
 
 .places-pic-box:hover .broshure-bg {
@@ -2246,8 +2246,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 528px;
   overflow-x: hidden;
-  background: -o-linear-gradient(20deg, white 64%, #459A77 36%);
-  background: linear-gradient(70deg, white 64%, #459A77 36%);
+  background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
+  background: linear-gradient(70deg, white 64%, #5E7390 36%);
 }
 
 .ap-con {
@@ -2368,7 +2368,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .submit {
   width: calc(100% - 186px);
   height: 42px;
-  background-color: #459A77;
+  background-color: #5E7390;
   border: 0;
   color: white;
   cursor: pointer;
@@ -2377,7 +2377,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .menu__submit {
   width: calc(100% - 124px);
   height: 42px;
-  background-color: #459A77;
+  background-color: #5E7390;
   border: 0;
   color: white;
   cursor: pointer;
@@ -2481,7 +2481,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .about-project-btn:hover {
-  background-color: #459A77;
+  background-color: #5E7390;
 }
 
 .about-project-btn:hover svg {
@@ -2598,7 +2598,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .twr-slider .twrSwiper .swiper-scrollbar-drag {
-  background-color: #459A77 !important;
+  background-color: #5E7390 !important;
 }
 
 .twr-slider .twrSwiper .swiper-pagination {
@@ -2678,6 +2678,20 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  overflow-x: auto;
+  visibility: visible;
+  display: none;
+}
+
+.bg-map__wrap {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .bg-map.active {
@@ -2685,10 +2699,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -o-transition: 0.2s;
   transition: 0.2s;
   opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .bg-map img {
-  width: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 100%;
   position: absolute;
   top: 0;
@@ -2732,8 +2750,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  background-color: #2F6D4D;
+  background-color: #5E7390;
   color: white;
+}
+
+.map-nav > .active svg,
+.map-btn:hover svg {
+  fill: #5E7390;
 }
 
 .gallery {
@@ -3011,9 +3034,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .floor__tab-item.active {
-  background: #459A77;
+  background: #5E7390;
   color: #fff;
-  border-color: #459A77;
+  border-color: #5E7390;
 }
 
 .floor__item {
@@ -3147,7 +3170,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .floor__item-btn {
   padding: 10px 30px;
-  background-color: #459A77;
+  background-color: #5E7390;
   border: 0;
   outline: none;
   cursor: pointer;
@@ -3193,7 +3216,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .ad-title {
   text-transform: uppercase;
-  color: #459A77;
+  color: #5E7390;
   font-size: 64px;
   font-family: "Tenor Sans", sans-serif;
   max-width: 400px;
@@ -3412,7 +3435,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  color: #459A77;
+  color: #5E7390;
   font-family: "Tenor Sans", sans-serif;
   line-height: 131px;
   font-size: 112px;
@@ -3614,7 +3637,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .panel-container .left .logo .sub__title span {
-  color: #459A77;
+  color: #5E7390;
 }
 
 .panel-container .left .logo .text {
@@ -4108,12 +4131,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 *::-moz-selection {
-  background: #459A77;
+  background: #5E7390;
   color: white;
 }
 
 *::selection {
-  background: #459A77;
+  background: #5E7390;
   color: white;
 }
 
@@ -4142,7 +4165,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #459A77;
+  background: #5E7390;
   border-radius: 0;
 }
 
@@ -4401,9 +4424,9 @@ body {
   }
 
   .about-project {
-    background-image: -webkit-gradient(linear, right top, left top, from(#459A77), to(#2F6D4D));
-    background-image: -o-linear-gradient(right, #459A77 0%, #2F6D4D 100%);
-    background-image: linear-gradient(270deg, #459A77 0%, #2F6D4D 100%);
+    background-image: -webkit-gradient(linear, right top, left top, from(#5E7390), to(#5E7390));
+    background-image: -o-linear-gradient(right, #5E7390 0%, #5E7390 100%);
+    background-image: linear-gradient(270deg, #5E7390 0%, #5E7390 100%);
     position: relative;
     overflow: hidden;
   }
@@ -4430,6 +4453,36 @@ body {
 
   .map-title p {
     font-size: 56px;
+  }
+
+  .map-nav {
+    padding: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: #F9F9F9;
+  }
+
+  .map-btn {
+    background: transparent;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 25%;
   }
 
   .floor__navigation {
@@ -4526,18 +4579,6 @@ body {
 }
 
 @media (max-width: 860px) {
-  .map-nav {
-    top: 0;
-    width: 100%;
-    border-radius: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .map-btn {
     margin-left: 0;
     padding: 12px 30px;
@@ -4797,6 +4838,43 @@ body {
   .map-title p {
     font-size: 32px;
     line-height: 37px;
+  }
+
+  .map-btn span {
+    display: none;
+  }
+
+  .map-btn div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .map-btn div svg {
+    fill: #D9D9D9;
+  }
+
+  .map-nav > .active,
+  .map-btn:hover {
+    background: transparent;
+    position: relative;
+  }
+
+  .map-nav > .active::before,
+  .map-btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #5E7390;
   }
 
   .floor__body {
