@@ -6,7 +6,10 @@ mixin book()
             .sticky-bg
                 picture
                     source(srcset='@img/subtract-2.png' type='image/png')
-                    img(src='@img/subtract-2.png' alt='' draggable='false')
+                    img(src='@img/subtract-2.png' alt='' draggable='false').desktop
+                picture
+                    source(srcset='@img/subtract-2.2.png' type='image/png')
+                    img(src='@img/subtract-2.2.png' alt='' draggable='false').mobile
             .text
                 p PAY 10%
                 | TO BOOK A UNIT
