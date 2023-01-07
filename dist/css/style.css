@@ -2264,8 +2264,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   overflow-y: hidden;
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-  background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
-  background: linear-gradient(70deg, white 64%, #5E7390 36%);
+  background: -o-linear-gradient(20deg, #F4FBFF 64%, #5E7390 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
 }
 
 .ap-con {
@@ -2689,6 +2689,15 @@ body:not(.is-using-mouse) .fancybox__container :focus {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+.map__link {
+  position: absolute;
+  right: 70px;
+  bottom: 64px;
+  width: 84px;
+  height: 84px;
+  z-index: 50;
 }
 
 .bg-map {
@@ -3649,13 +3658,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .panel-container .left .logo p {
-  font-weight: 700;
+  font-weight: 300;
   font-size: 24px;
   line-height: 29px;
   color: white;
 }
 
-.panel-container .left .logo img {
+.panel-container .left .logo svg {
   width: 440px;
   margin: 16px 0;
 }
@@ -3664,11 +3673,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: white;
   font-size: 24px;
   line-height: 29px;
-  margin-bottom: 24px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .panel-container .left .logo .sub__title span {
-  color: #5E7390;
+  color: #83B1EF;
 }
 
 .panel-container .left .logo .text {
@@ -4334,7 +4344,7 @@ body {
     gap: 80px;
   }
 
-  .panel-container .left .logo img {
+  .panel-container .left .logo svg {
     width: 358px;
   }
 
@@ -5110,7 +5120,7 @@ body {
     font-size: 20px;
   }
 
-  .panel-container .left .logo img {
+  .panel-container .left .logo svg {
     width: 300px;
   }
 
