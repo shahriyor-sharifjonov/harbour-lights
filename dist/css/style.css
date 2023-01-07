@@ -3644,13 +3644,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .panel-container .left .logo p {
-  font-weight: 700;
+  font-weight: 300;
   font-size: 24px;
   line-height: 29px;
   color: white;
 }
 
-.panel-container .left .logo img {
+.panel-container .left .logo svg {
   width: 440px;
   margin: 16px 0;
 }
@@ -3659,11 +3659,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: white;
   font-size: 24px;
   line-height: 29px;
-  margin-bottom: 24px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .panel-container .left .logo .sub__title span {
-  color: #5E7390;
+  color: #83B1EF;
 }
 
 .panel-container .left .logo .text {
@@ -4329,7 +4330,7 @@ body {
     gap: 80px;
   }
 
-  .panel-container .left .logo img {
+  .panel-container .left .logo svg {
     width: 358px;
   }
 
@@ -5105,7 +5106,7 @@ body {
     font-size: 20px;
   }
 
-  .panel-container .left .logo img {
+  .panel-container .left .logo svg {
     width: 300px;
   }
 
