@@ -1919,6 +1919,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
      object-position: center;
 }
 
+.banner-video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .swiper-button-next {
   position: absolute;
   bottom: 0 !important;
@@ -1963,7 +1970,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .slide-container {
@@ -1990,11 +1997,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: -ms-grid;
   display: grid;
   gap: 16px;
+  text-transform: uppercase;
 }
 
 .learn-more-span {
   color: #5E7390;
   white-space: nowrap;
+  display: block;
 }
 
 .slide-learn-more p,
@@ -2045,6 +2054,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+  display: none;
 }
 
 #arrow-svg {
@@ -2251,10 +2261,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 528px;
   overflow-x: hidden;
-<<<<<<< HEAD
-=======
   overflow-y: hidden;
->>>>>>> 1d66c807bb5144c71d1325b0f0ae5d6889fb1745
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
   background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
@@ -3096,6 +3103,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.floor__item-img img {
+  cursor: pointer;
 }
 
 .floor__item-img img {

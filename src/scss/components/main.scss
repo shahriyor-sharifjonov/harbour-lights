@@ -83,6 +83,11 @@
     object-fit: cover;
     object-position: center;
 }
+.banner-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .swiper-button-next{
     position: absolute;
@@ -125,7 +130,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .slide-container{
@@ -147,6 +152,7 @@
     color: white;
     display: grid;
     gap: 16px;
+    text-transform: uppercase;
     @media (max-width: 992px) {
         font-size: 50px;
         left: 100px;
@@ -156,6 +162,7 @@
 .learn-more-span{
     color: #5E7390;
     white-space: nowrap;
+    display: block;
 }
 
 .slide-learn-more p,.learn-more-span{
@@ -197,6 +204,7 @@
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
+    display: none;
 }
 
 #arrow-svg{
