@@ -384,11 +384,11 @@
 .places-img-number{
     width: 60px;
     padding-top: 20px;
-    font-weight: 400;
+    font-weight: 400; 
     font-size: 32px;
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Tenor Sans', sans-serif; 
     float: left;
-    @media (max-width: 992px){
+    @media (max-width: 992px){ 
         font-size: 28px;
     }
     @media (max-width: 840px){
@@ -452,7 +452,6 @@
     overflow-x: hidden;
     background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
     background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
-
     @include media(992){
         background-image: linear-gradient(270deg, #5E7390 0%, #5E7390 100%);
         position: relative;
