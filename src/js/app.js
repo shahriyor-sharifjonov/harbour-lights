@@ -22,6 +22,7 @@ import Swiper, {
   FreeMode,
   Mousewheel,
   Navigation,
+  Pagination,
   Scrollbar,
 } from "swiper";
 
@@ -205,12 +206,13 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 const autoSwiper = new Swiper(".twrSwiper", {
-  modules: [Scrollbar, Autoplay],
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  modules: [Pagination, Autoplay],
   spaceBetween: 0,
   simulateTouch: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
   autoplay: {
     delay: 2000,
   },
@@ -369,7 +371,6 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     {
       opacity: 0,
       scale: 2,
-    //   autoAlpha: true,
     },
     "start"
   );
