@@ -848,12 +848,15 @@
     visibility: visible;
     display: none;
     &__wrap{
-        width: max-content;
+        width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        @include media(768){
+            width: max-content;
+        }
     }
 }
 
@@ -865,12 +868,15 @@
 }
 
 .bg-map img{
-    width: max-content;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
+    width: 100%;
+    @include media(992){
+    width: max-content;
+    }
 }
 
 .map-nav{
