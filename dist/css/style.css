@@ -2251,6 +2251,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 528px;
   overflow-x: hidden;
+<<<<<<< HEAD
+=======
+  overflow-y: hidden;
+>>>>>>> 1d66c807bb5144c71d1325b0f0ae5d6889fb1745
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
   background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
@@ -2582,26 +2586,22 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 100vh;
   z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
 }
 
 .twr-title img {
   width: 100%;
   max-width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.twr-title .desktop {
+  display: block;
+}
+
+.twr-title .mobile {
+  display: none;
 }
 
 .twr-slider {
@@ -2614,10 +2614,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   margin: 0;
   padding: 60px 120px;
-}
-
-.twr-slider .twrSwiper .swiper-scrollbar-drag {
-  background-color: #5E7390 !important;
 }
 
 .twr-slider .twrSwiper .swiper-pagination {
@@ -3061,9 +3057,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 120px;
 }
 
@@ -3097,6 +3093,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .floor__item-img img {
@@ -3113,6 +3112,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
           flex-direction: column;
   gap: 15px;
   min-width: 330px;
+  padding-top: 35px;
 }
 
 .floor__item-info-row {
@@ -3373,9 +3373,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   z-index: 3;
   overflow: hidden;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), color-stop(80%, rgba(0, 0, 0, 0)), color-stop(10%, black));
-  background: -o-linear-gradient(bottom, black 10%, rgba(0, 0, 0, 0) 80%, black 10%);
-  background: linear-gradient(0deg, black 10%, rgba(0, 0, 0, 0) 80%, black 10%);
 }
 
 .book-container .book-sticky .sticky-bg img {
@@ -3383,6 +3380,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.book-container .book-sticky .sticky-bg .desktop {
+  display: block;
+}
+
+.book-container .book-sticky .sticky-bg .mobile {
+  display: none;
 }
 
 .book-container .book-sticky .text {
@@ -4542,6 +4547,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 5px;
+    padding-top: 0;
   }
 
   .floor__item-info-row {
@@ -4719,10 +4725,6 @@ body {
     height: 100%;
   }
 
-  .twr-title img {
-    width: 100%;
-  }
-
   .map-title p {
     font-size: 46px;
   }
@@ -4789,6 +4791,30 @@ body {
 
   .partners img {
     width: 160px;
+  }
+}
+
+@media (max-width: 700px) {
+  .twr-title .desktop {
+    display: none;
+  }
+
+  .twr-title .mobile {
+    display: block;
+    -webkit-transform: scale(1.7);
+        -ms-transform: scale(1.7);
+            transform: scale(1.7);
+  }
+
+  .book-container .book-sticky .sticky-bg .desktop {
+    display: none;
+  }
+
+  .book-container .book-sticky .sticky-bg .mobile {
+    display: block;
+    -webkit-transform: scale(1.7);
+        -ms-transform: scale(1.7);
+            transform: scale(1.7);
   }
 }
 
@@ -5057,6 +5083,18 @@ body {
 }
 
 @media (max-width: 400px) {
+  .twr-title .mobile {
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+
+  .book-container .book-sticky .sticky-bg .mobile {
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+
   .panel-container .left .logo p {
     font-size: 20px;
   }
