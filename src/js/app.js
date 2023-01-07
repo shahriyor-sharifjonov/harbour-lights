@@ -24,6 +24,7 @@ import Swiper, {
   FreeMode,
   Mousewheel,
   Navigation,
+  Pagination,
   Scrollbar,
 } from "swiper";
 
@@ -197,14 +198,15 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 const autoSwiper = new Swiper(".twrSwiper", {
-  modules: [Scrollbar, Autoplay],
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  modules: [Pagination, Autoplay],
   spaceBetween: 0,
   simulateTouch: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
   autoplay: {
-    delay: 2000,
+    delay: 2000, 
   },
 });
 
@@ -325,7 +327,7 @@ const numberClass = document.querySelectorAll(".show-number");
 numberClass?.forEach((el) => {
   el.addEventListener("click", () => {
     el.innerHTML = el.getAttribute("data-number");
-    el.style.color = "#459A77";
+    el.style.color = "#5E7390";
   });
 });
 
@@ -361,7 +363,6 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     {
       opacity: 0,
       scale: 2,
-      //   autoAlpha: true,
     },
     "start"
   );
@@ -501,3 +502,23 @@ gsap.utils.toArray(".book-sticky").forEach((section) => {
       "start"
     );
 });
+
+gsap.utils.toArray(".book-container").forEach((section) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "30% 70%",
+      end: "30% 50%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+  tl.add("start").to(
+      section.querySelector(".text"),
+      {
+        scale: 1.2,
+      },
+      "start"
+  );
+});
+
