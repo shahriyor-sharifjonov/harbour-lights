@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230107152443">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230107154124">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap&_v=20230107152443" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&amp;display=swap&_v=20230107152443" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&amp;display=swap&_v=20230107152443" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230107152443">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap&_v=20230107154124" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&amp;display=swap&_v=20230107154124" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&amp;display=swap&_v=20230107154124" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230107154124">
   </head>
   <body id="body">
     <div class="wrapper">
@@ -393,10 +393,18 @@
               </div>
             </section>
             <section class="map" id="location"> 
-              <div class="bg-map active" id="map1"><picture><source srcset="img/map-all.webp" type="image/webp"><img src="img/map-all.png" alt=""></picture></div>
-              <div class="bg-map" id="map2"><picture><source srcset="img/map-edu.webp" type="image/webp"><img src="img/map-edu.png" alt=""></picture></div>
-              <div class="bg-map" id="map3"><picture><source srcset="img/map-shop.webp" type="image/webp"><img src="img/map-shop.png" alt=""></picture></div>
-              <div class="bg-map" id="map4"><picture><source srcset="img/map-leisure.webp" type="image/webp"><img src="img/map-leisure.png" alt=""></picture></div>
+              <div class="bg-map active" id="map1">
+                <div class="bg-map__wrap"> <picture><source srcset="img/map-all.webp" type="image/webp"><img src="img/map-all.png" alt=""></picture></div>
+              </div>
+              <div class="bg-map" id="map2">
+                <div class="bg-map__wrap"> <picture><source srcset="img/map-edu.webp" type="image/webp"><img src="img/map-edu.png" alt=""></picture></div>
+              </div>
+              <div class="bg-map" id="map3">
+                <div class="bg-map__wrap"> <picture><source srcset="img/map-shop.webp" type="image/webp"><img src="img/map-shop.png" alt=""></picture></div>
+              </div>
+              <div class="bg-map" id="map4">
+                <div class="bg-map__wrap"> <picture><source srcset="img/map-leisure.webp" type="image/webp"><img src="img/map-leisure.png" alt=""></picture></div>
+              </div>
               <div class="map-nav" id="map-nav"> 
                 <button class="map-btn active" data-target="#map1"> <span>All</span>
                   <div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -919,6 +927,6 @@
               </div>
             </section>
     </div>
-    <script src="js/app.min.js?_v=20230107152443"> </script>
+    <script src="js/app.min.js?_v=20230107154124"> </script>
   </body>
 </html>

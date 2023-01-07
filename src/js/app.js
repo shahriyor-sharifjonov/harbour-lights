@@ -333,7 +333,7 @@ const numberClass = document.querySelectorAll(".show-number");
 numberClass?.forEach((el) => {
   el.addEventListener("click", () => {
     el.innerHTML = el.getAttribute("data-number");
-    el.style.color = "#459A77";
+    el.style.color = "#5E7390";
   });
 });
 

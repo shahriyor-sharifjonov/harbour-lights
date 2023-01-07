@@ -39,13 +39,13 @@
             font-size: 48px;
             font-family: 'Tenor Sans', sans-serif;
             span{
-                color: #459A77;
+                color: #5E7390;
                 white-space: nowrap;
                 font-family: 'Tenor Sans', sans-serif;
             }
         }
         button{
-            background-color: #459A77;
+            background-color: #5E7390;
             padding: 10px 30px;
             outline: none;
             border: 0;
@@ -106,7 +106,7 @@
 }
 
 .swiper-button-next:after,.swiper-button-prev:after{
-    color: #459A77;
+    color: #5E7390;
     font-size: 20px !important;
     font-weight: bold;
 }
@@ -154,7 +154,7 @@
 }
 
 .learn-more-span{
-    color: #459A77;
+    color: #5E7390;
     white-space: nowrap;
 }
 
@@ -176,7 +176,7 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    background-color: #459A77;
+    background-color: #5E7390;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -301,7 +301,7 @@
 .places-pic-box{
     width: calc(50% - 15px);
     height: 600px;
-    border-bottom: 2px solid #459A77;
+    border-bottom: 2px solid #5E7390;
     margin-top: 40px;
     padding-bottom: 20px;
     cursor: default;
@@ -372,8 +372,8 @@
 }
 
 .broshure:hover{
-    background-color: #459A77;
-    border: 1px solid #459A77;
+    background-color: #5E7390;
+    border: 1px solid #5E7390;
 }
 
 .places-pic-box:hover .broshure-bg{
@@ -453,9 +453,9 @@
     width: 100%;
     height: 528px;
     overflow-x: hidden;
-    background: linear-gradient(70deg, white 64%, #459A77 36%);
+    background: linear-gradient(70deg, white 64%, #5E7390 36%);
     @include media(992){
-        background-image: linear-gradient(270deg, #459A77 0%, #2F6D4D 100%);
+        background-image: linear-gradient(270deg, #5E7390 0%, #5E7390 100%);
         position: relative;
         overflow: hidden;
         &::before{
@@ -605,7 +605,7 @@
 .submit{
     width: calc(100% - 186px);
     height: 42px;
-    background-color: #459A77;
+    background-color: #5E7390;
     border: 0;
     color: white;
     cursor: pointer;
@@ -614,7 +614,7 @@
 .menu__submit{
     width: calc(100% - 124px);
     height: 42px;
-    background-color: #459A77;
+    background-color: #5E7390;
     border: 0;
     color: white;
     cursor: pointer;
@@ -660,7 +660,7 @@
     cursor: pointer;
     transition: 300ms ease;
     &:hover{
-        background-color: #459A77;
+        background-color: #5E7390;
         svg{
             fill: #fff;
         }
@@ -760,7 +760,7 @@
             padding: 60px 15px;
         }
         .swiper-scrollbar-drag{
-            background-color: #459A77 !important;
+            background-color: #5E7390 !important;
         }
         .swiper-pagination{
             width: 70%;
@@ -836,15 +836,28 @@
     overflow: hidden;
     opacity: 0;
     transition: .2s;
+    overflow-x: auto;
+    visibility: visible;
+    display: none;
+    &__wrap{
+        width: max-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .bg-map.active{
     transition: .2s;
     opacity: 1;
+    visibility: visible;
+    display: block;
 }
 
 .bg-map img{
-    width: 100%;
+    width: max-content;
     height: 100%;
     position: absolute;
     top: 0;
@@ -859,12 +872,15 @@
     background-color: white;
     border-radius: 6px;
     display: flex;
-    @media (max-width: 860px){
+    @media (max-width: 992px){
+        padding: 0;
         top: 0;
         width: 100%;
         border-radius: 0;
+        height: 70px;
         display: flex;
         justify-content: space-between;
+        background: #F9F9F9;
     }
 }
 
@@ -877,8 +893,29 @@
     border-radius: 3px;
     margin-left: 10px;
     background-color: white;
+    @include media(992){
+        background: transparent;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(25%);
+    }
+    span{
+        @include media(575){
+            display: none;
+        }
+    }
     div{
         display: none;
+        @include media(575){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                fill: #D9D9D9;
+            }
+        }
     }
     @media (max-width: 860px) {
         margin-left: 0;
@@ -892,6 +929,22 @@
 
 .map-nav > .active, .map-btn:hover {
     transition: .2s;
-    background-color: #2F6D4D;
+    background-color: #5E7390;
     color: white;
+    @include media(575){
+        background: transparent;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: #5E7390;
+        }
+    }
+    svg{
+        fill: #5E7390;
+    }
 }
