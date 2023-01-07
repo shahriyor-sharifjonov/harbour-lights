@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
 import { Draggable } from "gsap/dist/Draggable.js";
 
+import { Fancybox } from "@fancyapps/ui";
+
 // SmoothScroll({
 //     animationTime: 1000,
 //     stepSize: 60,
@@ -40,31 +42,18 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 
 const body = document.getElementById("body");
 
-function getSamePageAnchor(link) {
-  if (
-    link.protocol !== window.location.protocol ||
-    link.host !== window.location.host ||
-    link.pathname !== window.location.pathname ||
-    link.search !== window.location.search
-  ) {
-    return false;
-  }
+window.onload = function () {
+  var a = document.getElementsByTagName("a"),
+    i = a.length;
 
-  return link.hash;
-}
-function scrollToHash(hash, e) {
-  const elem = hash ? document.querySelector(hash) : false;
-  if (elem) {
-    if (e) e.preventDefault();
-    gsap.to(window, { duration: 0, scrollTo: elem, ease: "power2" });
+  while (i--) {
+    a[i].onclick = (function () {
+      return function () {
+        return false;
+      };
+    })();
   }
-}
-document.querySelectorAll("a[href]").forEach((a) => {
-  a.addEventListener("click", (e) => {
-    scrollToHash(getSamePageAnchor(a), e);
-  });
-});
-scrollToHash(window.location.hash);
+};
 
 gsap.utils.toArray(".places-top").forEach((section) => {
   const tl = gsap.timeline({
@@ -87,9 +76,9 @@ gsap.utils.toArray(".places-top").forEach((section) => {
       "start"
     )
     .from(
-      section.querySelector(".box-right-side"), 
+      section.querySelector(".box-right-side"),
       {
-        x: 200, 
+        x: 200,
         opacity: 0,
         ease: "expo.ease",
       },
@@ -128,28 +117,31 @@ gsap.utils.toArray(".places-bottom").forEach((section) => {
     );
 });
 
-gsap.utils.toArray(".book-img").forEach(section => {
-    const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: section,
-                start: "top 60%",
-                end: "top 20%",
-                scrub: 2,
-                markers: false,
-            },
-        });
-    tl
-        .add('start')
-        .fromTo(section, {
-            x: 100,
-            scale: 0.9,
-            ease: "expo.ease",
-        },{
-            x: 0,
-            scale: 1.1,
-            opacity: 1,
-        }, 'start')
-})
+gsap.utils.toArray(".book-img").forEach((section) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top 60%",
+      end: "top 20%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+  tl.add("start").fromTo(
+    section,
+    {
+      x: 100,
+      scale: 0.9,
+      ease: "expo.ease",
+    },
+    {
+      x: 0,
+      scale: 1.1,
+      opacity: 1,
+    },
+    "start"
+  );
+});
 
 gsap.utils.toArray(".formInput").forEach((section) => {
   const tl = gsap.timeline({
@@ -318,16 +310,16 @@ const menu_btn_back = document.querySelectorAll(".menu-close");
 const menu = document.getElementById("menu");
 
 menu_btn.addEventListener("click", () => {
-  console.log('idiot opened');
+  console.log("idiot opened");
   menu.classList.add("menuOpened");
-  body.style.overflowY = "hidden"
+  body.style.overflowY = "hidden";
 });
 
-menu_btn_back.forEach(el => {
+menu_btn_back.forEach((el) => {
   el.addEventListener("click", () => {
     console.log("idiot closed");
     menu.classList.remove("menuOpened");
-    body.style.overflowY = "auto"
+    body.style.overflowY = "auto";
   });
 });
 
@@ -376,16 +368,12 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
   );
 });
 
-
-
 // ============= gallery
 
 (function gsapMatchMedia() {
   ScrollTrigger.matchMedia({
-    all: function () {
-      
-    },
-    // 2500 - 1025 
+    all: function () {},
+    // 2500 - 1025
     "(max-width: 2500px) and (min-width: 1025px)": function () {
       let sections = gsap.utils.toArray(".gallery-slide");
 
@@ -403,33 +391,33 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     },
     // 1024 - 577
     "(max-width: 1024px) and (min-width: 577px)": function () {
-        let sections = gsap.utils.toArray(".gallery-slide");
-        gsap.to(sections, {
-          xPercent: -97.8 * (sections.length - 1),
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: ".gallery",
-            pin: true,
-            scrub: true,
-            start: "top 0%",
-            end: "+=10000",
-          },
-        });
+      let sections = gsap.utils.toArray(".gallery-slide");
+      gsap.to(sections, {
+        xPercent: -97.8 * (sections.length - 1),
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".gallery",
+          pin: true,
+          scrub: true,
+          start: "top 0%",
+          end: "+=10000",
+        },
+      });
     },
     // 576 - 320
     "(max-width: 576px) and (min-width: 320px)": function () {
-        let sections = gsap.utils.toArray(".gallery-slide");
-        gsap.to(sections, {
-          xPercent: -97.8 * (sections.length - 1),
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: ".gallery",
-            pin: true,
-            scrub: true,
-            start: "top 0%",
-            end: "+=10000",
-          },
-        });
+      let sections = gsap.utils.toArray(".gallery-slide");
+      gsap.to(sections, {
+        xPercent: -97.8 * (sections.length - 1),
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".gallery",
+          pin: true,
+          scrub: true,
+          start: "top 0%",
+          end: "+=10000",
+        },
+      });
     },
   });
 })();
@@ -438,16 +426,16 @@ function format_number(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const n = document.querySelectorAll('.numbers');
-n.forEach(el => {
-  let value = { val: parseInt(el.getAttribute('data-number')), };
-  const tl = gsap.timeline({ 
+const n = document.querySelectorAll(".numbers");
+n.forEach((el) => {
+  let value = { val: parseInt(el.getAttribute("data-number")) };
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: el,
       start: "0% 90%",
       end: "30% 50%",
       markers: false,
-    }, 
+    },
   });
   tl.from(value, {
     duration: 3,
@@ -458,11 +446,28 @@ n.forEach(el => {
       el.innerText = format_number(value.val);
     },
   });
-})
+});
 
 // Book don't edit
 
-
+gsap.utils.toArray(".book-container").forEach((section) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "30% 70%",
+      end: "30% 50%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+  tl.add("start").to(
+    section.querySelector(".text"),
+    {
+      scale: 1.2,
+    },
+    "start"
+  );
+});
 
 const bookHeight = document.querySelector(".twr-title").clientHeight / 2;
 
@@ -516,3 +521,4 @@ gsap.utils.toArray(".book-container").forEach((section) => {
       "start"
   );
 });
+
