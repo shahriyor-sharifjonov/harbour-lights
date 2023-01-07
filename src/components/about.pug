@@ -15,13 +15,19 @@ mixin about()
                     span 
                         img(src='@img/checked.svg' alt='') 
                         |  Information about stores 
-                form(action='').form 
+                form(action='https://form.sales-inquiries.ae/logger/form_receiver/' data-gtag-submit="popup" method="post").form 
                     label(for='name') 
                     input#name.input-text.formInput(type='text' name='name' placeholder='Your name')
                     label(for='mail')
-                    input#mail.input-text.formInput(type='text' name='mail' placeholder='Your mail')
+                    input#mail.input-text.formInput(type='email' name='email' placeholder='Your mail')
                     label(for='phone_number')
-                    input#phone_number.input-text.formInput(type='tel' name='mail' placeholder='Phone number')
+                    input#phone_number.input-text.formInput(type='tel' name='phone' placeholder='Phone number')
+                    input(type="hidden" name="project" value="harbour_lights")
+                    input(type="hidden" name="description" value="page_form")
+                    input(type="hidden" name="duration" value="").duration
+                    input(type="hidden" name="pasted_fields" value="").pasted_fields
+                    input(type="hidden" name="language" value="english")
+                    input(type="hidden" name="current_page" value="")
                     .lower-btn-con.formInput
                         input.submit(type='submit' value='Enquire')
                         a.about-project-btn

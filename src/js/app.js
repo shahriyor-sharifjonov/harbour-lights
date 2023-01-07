@@ -378,7 +378,7 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
       let sections = gsap.utils.toArray(".gallery-slide");
 
       gsap.to(sections, {
-        xPercent: -96 * (sections.length - 1),
+        xPercent: -92.5 * (sections.length - 1),
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".gallery",
@@ -393,7 +393,7 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     "(max-width: 1024px) and (min-width: 577px)": function () {
       let sections = gsap.utils.toArray(".gallery-slide");
       gsap.to(sections, {
-        xPercent: -97.8 * (sections.length - 1),
+        xPercent: -96 * (sections.length - 1),
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".gallery",
@@ -408,7 +408,7 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     "(max-width: 576px) and (min-width: 320px)": function () {
       let sections = gsap.utils.toArray(".gallery-slide");
       gsap.to(sections, {
-        xPercent: -97.8 * (sections.length - 1),
+        xPercent: -96 * (sections.length - 1),
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".gallery",

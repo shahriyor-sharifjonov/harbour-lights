@@ -1577,6 +1577,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: white;
 }
 
+.menu__input-text:focus {
+  -webkit-box-shadow: 0px 0px 4px;
+          box-shadow: 0px 0px 4px;
+}
+
 .submit {
   width: calc(100% - 186px);
   height: 42px;
@@ -2246,13 +2251,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 528px;
   overflow-x: hidden;
-<<<<<<< HEAD
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-=======
   background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
   background: linear-gradient(70deg, white 64%, #5E7390 36%);
->>>>>>> 959324377b3c3744c50de231cea54df95b97351b
 }
 
 .ap-con {
@@ -2378,10 +2380,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .submit {
   width: calc(100% - 186px);
   height: 42px;
-<<<<<<< HEAD
-  text-transform: uppercase;
-=======
->>>>>>> 959324377b3c3744c50de231cea54df95b97351b
   background-color: #5E7390;
   border: 0;
   color: white;
@@ -3888,6 +3886,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__input::placeholder {
   font-size: 14px;
   color: white;
+}
+
+.broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__input:focus {
+  -webkit-box-shadow: 0px 0px 4px;
+          box-shadow: 0px 0px 4px;
 }
 
 .broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__lower {
