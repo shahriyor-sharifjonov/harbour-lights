@@ -515,7 +515,7 @@ gsap.utils.toArray(".book-container").forEach((section) => {
   });
   tl.add("start").to(
       section.querySelector(".text"),
-      {
+      { 
         scale: 1.2,
       },
       "start"
