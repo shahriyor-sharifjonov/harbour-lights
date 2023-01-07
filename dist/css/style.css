@@ -2250,8 +2250,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 528px;
   overflow-x: hidden;
-  background: -o-linear-gradient(20deg, white 64%, #459A77 36%);
-  background: linear-gradient(70deg, white 64%, #459A77 36%);
+  background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
 }
 
 .ap-con {
@@ -2344,6 +2344,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   border: 1px solid rgba(0, 0, 0, 0.35);
 }
 
+.input-text:focus {
+  -webkit-box-shadow: 0px 0px 1px;
+          box-shadow: 0px 0px 1px;
+}
+
 .input-text::-webkit-input-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.35);
@@ -2372,10 +2377,18 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .submit {
   width: calc(100% - 186px);
   height: 42px;
-  background-color: #459A77;
+  text-transform: uppercase;
+  background-color: #5E7390;
   border: 0;
   color: white;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #8091a8;
 }
 
 .menu__submit {
@@ -2485,7 +2498,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .about-project-btn:hover {
-  background-color: #459A77;
+  background-color: #5E7390;
 }
 
 .about-project-btn:hover svg {

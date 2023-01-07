@@ -453,12 +453,12 @@
     width: 100%;
     height: 528px;
     overflow-x: hidden;
-    background: linear-gradient(70deg, white 64%, #459A77 36%);
+    background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
     @include media(992){
         background-image: linear-gradient(270deg, #459A77 0%, #2F6D4D 100%);
         position: relative;
         overflow: hidden;
-        &::before{
+        &::before{ 
             content: '';
             position: absolute;
             bottom: 56px;
@@ -597,6 +597,10 @@
     border: 1px solid rgb(0,0,0, .35);
 }
 
+.input-text:focus{
+    box-shadow: 0px 0px 1px;
+}
+
 .input-text::placeholder{
     font-size: 16px;
     color: rgb(0,0,0, .35);
@@ -605,10 +609,16 @@
 .submit{
     width: calc(100% - 186px);
     height: 42px;
-    background-color: #459A77;
+    text-transform: uppercase;
+    background-color: #5E7390;
     border: 0;
     color: white;
+    transition: .3s;
     cursor: pointer;
+}
+
+.submit:hover{
+    background-color: #8091a8;
 }
 
 .menu__submit{
@@ -660,7 +670,7 @@
     cursor: pointer;
     transition: 300ms ease;
     &:hover{
-        background-color: #459A77;
+        background-color: #5E7390;
         svg{
             fill: #fff;
         }
