@@ -1,0 +1,109 @@
+.payment{
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    .container{
+        padding: 80px 20px 140px;
+        @media (max-width: 768px) {
+            padding: 64px 15px;
+        }
+    }
+}
+
+.payment-title{
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    font-family: 'Tenor Sans', sans-serif;
+    margin-bottom: 56px;
+    @media (max-width: 992px){
+        font-size: 44px;
+    }
+    @media (max-width: 768px){
+        font-size: 32px;
+    }
+}
+
+.percents{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 100px;
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+    }
+}
+
+.percents-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3{
+        font-weight: 400;
+        align-items: center;
+        text-transform: uppercase;
+        color: #459A77;
+        font-family: 'Tenor Sans', sans-serif;
+        line-height: 131px;
+        font-size: 112px;
+        @media (max-width: 992px) {
+            font-size: 86px;
+        }
+        @media (max-width: 768px) {
+            font-size: 72px;
+        }
+    }
+    p{
+        font-weight: 400;
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 24px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+.partners-title{
+    font-weight: 400;
+    font-size: 64px;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 64px;
+    @media (max-width: 992px) {
+        font-size: 44px;
+    }
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
+}
+
+.partners{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 64px 128px;
+    @media (max-width: 768px){
+        gap: 54px 54px;
+    }
+    img{
+        width: 206px;
+        transition: .2s;
+        @media (max-width: 768px) {
+            width: 160px;
+        }
+        @media (max-width: 420px) {
+            width: 140px;
+        }
+        @media (max-width: 364px) {
+            width: 125px;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

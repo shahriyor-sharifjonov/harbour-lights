@@ -1,0 +1,283 @@
+.broshure-con{
+    width: 100vw;
+    min-width: 340px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transition: .3s;
+    display: none;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    .blur{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.75);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    .popup{
+        width: 100%;
+        max-width: 1080px;
+        position: relative;
+        border: 4px solid #2F3A49;
+        animation: anim .2s ease-in-out;
+        overflow: hidden;
+        @media(max-width: 1000px){
+            display: none;
+        }
+        .popup__bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .toning{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+        .popup__container{
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            position: relative;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .popup__text{
+                font-size: 32px;
+                line-height: 39px;
+                p{
+                    color: white;
+                    font-weight: 300;
+                    span{
+                        color: #6489BC;
+                    }
+                }
+            }
+            .popup__panel{
+                padding: 60px;
+                background-color: #2F3A49;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .popup-close{
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    cursor: pointer;
+                    svg{
+                        width: 22px;
+                        height: 20px;
+                    }
+                }
+                .popup-panel__container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    gap: 15px;
+                    .popup-panel__title{
+                        font-size: 64px;
+                        line-height: 75px;
+                        color: white;
+                        font-family: 'Tenor Sans', sans-serif;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                    }
+                    label{
+                        font-size: 16px;
+                        color: white;
+                        font-weight: 400;
+                    }
+                    .popup__input{
+                        width: 100%;
+                        padding: 12px;
+                        border: 1px solid white;
+                        background-color: transparent;
+                        outline: none;
+                        caret-color: white;
+                        color: white;
+                        &::placeholder{
+                            font-size: 14px;
+                            color: white;
+                        }
+                    }
+                    .popup__lower{
+                        width: 100%;
+                        height: 42px;
+                        display: flex;
+                        justify-content: space-between;
+                        .popup__submit{
+                            width: calc(100% - 186px);
+                            height: 42px;
+                            background-color: transparent;
+                            border: 1px solid #5E7390;
+                            color: #5E7390;
+                            cursor: pointer;
+                            outline: none;
+                            &:hover{
+                                background-color: #5E7390;
+                                color: white;
+                            }
+                        }
+                        .popup__btns{
+                            width: 42px;
+                            height: 42px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #5E7390;
+                                path{
+                                    fill: white;
+                                }
+                            }
+                            path{
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .popup-mobile{
+        width: calc(100% - 24px);
+        max-width: 351px;
+        border-radius: 4px;
+        padding: 20px;
+        background-color: white;
+        position: absolute;
+        animation: anim .2s ease-in-out;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: 1000px) {
+            display: flex;
+        }
+        h2{
+            font-size: 32px;
+            font-weight: 400;
+            font-family: 'Tenor Sans', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 37px;
+        }
+        p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 21px;
+            text-transform: uppercase;
+            line-height: 25px;
+            font-family: 'Tenor Sans', sans-serif;
+        }
+        .checked-text{
+            font-size: 9px;
+            line-height: 8px;
+            color: #2D374D;
+            span{
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+        .checked-text img{
+            width: 9px;
+            height: 7px;
+        }
+        .popup-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 17px;
+            width: 100%;
+            .menu__input-text{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid rgba(0, 0, 0, 0.35);
+                background-color: transparent;
+                outline: none;
+                caret-color: rgba(0, 0, 0, 0.35);
+                color: rgba(0, 0, 0, 0.35);
+            }
+            .menu__input-text::placeholder{
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.35);
+            }
+        }
+        .popup-mobile__lower{
+            width: 100%;
+            height: 42px;
+            display: flex;
+            justify-content: space-between;
+            .popup-mobile__submit{
+                width: calc(100% - 124px);
+                height: 42px;
+                background-color: rgba(0,0,0,.35);
+                border: 0;
+                color: white;
+                cursor: pointer;
+                &:hover{
+                    background-color: #5E7390;
+                }
+            }
+            .popup-mobile__btns{
+                width: 42px;
+                height: 42px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    background-color: #5E7390;
+                    path{
+                        fill: white;
+                    }
+                }
+                path{
+                    fill: rgba(0,0,0, 0.35);
+                }
+            }
+        }
+        .close{
+            color: black;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.opening{
+    display: flex;
+}
+
+@keyframes anim {
+    0%{
+        display: flex;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

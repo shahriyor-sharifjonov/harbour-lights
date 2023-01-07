@@ -1,0 +1,44 @@
+mixin twobutone()
+    section.towers
+        .twr-con
+            .twr-sticky
+                .twr-title
+                    picture
+                        source(srcset='@img/subtract-1.png' type='image/png')
+                        img(src='@img/subtract-1.png' alt='' draggable='false')
+                .twr-slider
+                    .swiper.mySwiper.twrSwiper
+                        .swiper-wrapper.twr-wrapper
+                            .swiper-slide
+                                picture
+                                    source(srcset='@img/autoSlider-1.png' type='image/png')
+                                    img(src='@img/autoSlider-1.png' alt='' draggable='false')
+                            .swiper-slide
+                                picture
+                                    source(srcset='@img/autoSlider-1.png' type='image/png')
+                                    img(src='@img/autoSlider-1.png' alt='' draggable='false')
+                            .swiper-slide
+                                picture
+                                    source(srcset='@img/autoSlider-1.png' type='image/png')
+                                    img(src='@img/autoSlider-1.png' alt='' draggable='false')
+                            .swiper-slide
+                                picture
+                                    source(srcset='@img/autoSlider-1.png' type='image/png')
+                                    img(src='@img/autoSlider-1.png' alt='' draggable='false')
+                        .swiper-pagination
+        .map-title
+            p A COMFORTABLE PLACE <br />FOR LIVING
+    section.map 
+        #map1.bg-map.active
+            img(src='@img/map-all.png' alt='') 
+        #map2.bg-map
+            img(src='@img/map-edu.png' alt='')
+        #map3.bg-map
+            img(src='@img/map-shop.png' alt='')
+        #map4.bg-map
+            img(src='@img/map-leisure.png' alt='')
+        #map-nav.map-nav
+            button.map-btn.active(data-target='#map1') All
+            button.map-btn(data-target='#map2') Education
+            button.map-btn(data-target='#map3') Shopping
+            button.map-btn(data-target='#map4') Leisure

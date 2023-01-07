@@ -1,0 +1,74 @@
+Arguments: 
+  /home/jasur/.nvm/versions/node/v18.12.1/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/jasur/.nvm/versions/node/v18.12.1/bin:/bin:/usr/bin:PATH:/home/jasur/go:/home/jasur/go/bin:/usr/local/go/bin:/snap/go/8627/bin/
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/browser-sync: ETIMEDOUT
+      at Timeout._onTimeout (/usr/share/yarn/lib/cli.js:141550:19)
+      at listOnTimeout (node:internal/timers:564:17)
+      at process.processTimers (node:internal/timers:507:7)
+
+npm manifest: 
+  {
+    "name": "gulp-2022",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "type": "module",
+    "scripts": {
+      "dev": "gulp",
+      "build": "gulp build --build",
+      "zip": "gulp deployZIP --build",
+      "svgSprive": "gulp svgSprive"
+    },
+    "author": "Shahriyorweb",
+    "license": "ISC",
+    "devDependencies": {
+      "browser-sync": "^2.27.7",
+      "del": "^6.0.0",
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^8.0.0",
+      "gulp-clean-css": "^4.3.0",
+      "gulp-file-include": "^2.3.0",
+      "gulp-fonter": "^0.3.0",
+      "gulp-group-css-media-queries": "^1.2.2",
+      "gulp-if": "^3.0.0",
+      "gulp-imagemin": "^8.0.0",
+      "gulp-newer": "^1.4.0",
+      "gulp-notify": "^4.0.0",
+      "gulp-plumber": "^1.2.1",
+      "gulp-pug": "^5.0.0",
+      "gulp-rename": "^2.0.0",
+      "gulp-replace": "^1.1.3",
+      "gulp-sass": "^5.1.0",
+      "gulp-svg-sprite": "^1.5.0",
+      "gulp-ttf2woff2": "^4.0.1",
+      "gulp-version-number": "^0.2.4",
+      "gulp-webp": "^4.0.1",
+      "gulp-webp-html-nosvg": "^1.0.4",
+      "gulp-webpcss": "^1.1.1",
+      "gulp-zip": "^5.1.0",
+      "sass": "^1.49.0",
+      "swiper": "^7.4.1",
+      "webp-converter": "2.2.3",
+      "webpack": "^5.67.0",
+      "webpack-stream": "^7.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

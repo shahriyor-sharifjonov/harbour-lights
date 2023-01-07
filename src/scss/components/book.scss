@@ -1,0 +1,54 @@
+.book-container{
+    width: 100%;
+    height: 250vh;
+    .book-sticky{
+        height: 100vh; 
+        width: 100%;
+        position: sticky;
+        top: 0;
+        overflow: hidden; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .toning{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .sticky-bg{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            overflow: hidden;
+            background: linear-gradient(0deg,black 10%, rgba(0,0,0,0) 80%, black 10%);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .text{
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            color: white;
+            font-size: 48px;
+            p{
+                font-family: 'Tenor Sans', sans-serif;
+            }
+        }
+    }
+}
