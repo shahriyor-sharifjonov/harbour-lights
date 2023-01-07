@@ -1597,6 +1597,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   background-color: #5E7390;
   border: 0;
   color: white;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -2001,7 +2002,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .learn-more-span {
-  color: #5E7390;
+  color: #A8CBFC;
   white-space: nowrap;
   display: block;
 }
@@ -3296,6 +3297,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   font-size: 24px;
   font-weight: 400;
   color: white;
+  display: none;
 }
 
 .gallery-container {
