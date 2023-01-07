@@ -40,15 +40,21 @@ mixin footer()
                 .right
                     .menu__contactUs
                         .menu__logo
-                            form.menu__form(action='')
+                            form.menu__form(action='https://form.sales-inquiries.ae/logger/form_receiver/' data-gtag-submit="popup" method="post")
                                 p.menu__contactUs-title Contact us
                                 .menu-contactUs__title
                                 label(for='footer_name') Full name
                                 input#footer_name.menu__input-text(type='text' placeholder='Your name' name='name')
                                 label(for='footer_mail') E-mail address
-                                input#footer_mail.menu__input-text(type='text' name='mail' placeholder='Your mail')
+                                input#footer_mail.menu__input-text(type='email' name='email' placeholder='Your mail')
                                 label(for='footer_phone_number') Phone number
-                                input#footer_phone_number.menu__input-text(type='tel' name='mail' placeholder='Phone number')
+                                input#footer_phone_number.menu__input-text(type='tel' name='phone' placeholder='Phone number')
+                                input(type="hidden" name="project" value="harbour_lights")
+                                input(type="hidden" name="description" value="page_form")
+                                input(type="hidden" name="duration" value="").duration
+                                input(type="hidden" name="pasted_fields" value="").pasted_fields
+                                input(type="hidden" name="language" value="english")
+                                input(type="hidden" name="current_page" value="")
                                 .menu__lower-btn-con
                                     input.menu__submit(type='submit' value='Enquire')
                                     a.about-project-btn(href='#')

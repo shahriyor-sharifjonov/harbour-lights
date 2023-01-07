@@ -384,12 +384,12 @@
 .places-img-number{
     width: 60px;
     padding-top: 20px;
-    font-weight: 400;
+    font-weight: 400; 
     font-size: 32px;
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Tenor Sans', sans-serif; 
     float: left;
-    @media (max-width: 992px){
-        font-size: 28px;
+    @media (max-width: 992px){   
+        font-size: 28px; 
     }
     @media (max-width: 840px){
         font-size: 32px;
@@ -452,8 +452,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
     background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-    background: linear-gradient(70deg, white 64%, #5E7390 36%);
-
+    background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
     @include media(992){
         background-image: linear-gradient(270deg, #5E7390 0%, #5E7390 100%);
         position: relative;
@@ -842,6 +841,14 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    &__link{
+        position: absolute;
+        right: 70px;
+        bottom: 64px;
+        width: 84px;
+        height: 84px;
+        z-index: 50;
+    }
 }
 
 .bg-map{

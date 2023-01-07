@@ -1577,6 +1577,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: white;
 }
 
+.menu__input-text:focus {
+  -webkit-box-shadow: 0px 0px 4px;
+          box-shadow: 0px 0px 4px;
+}
+
 .submit {
   width: calc(100% - 186px);
   height: 42px;
@@ -2249,8 +2254,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   overflow-y: hidden;
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-  background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
-  background: linear-gradient(70deg, white 64%, #5E7390 36%);
+  background: -o-linear-gradient(20deg, #F4FBFF 64%, #5E7390 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
 }
 
 .ap-con {
@@ -2674,6 +2679,15 @@ body:not(.is-using-mouse) .fancybox__container :focus {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+.map__link {
+  position: absolute;
+  right: 70px;
+  bottom: 64px;
+  width: 84px;
+  height: 84px;
+  z-index: 50;
 }
 
 .bg-map {
@@ -3884,6 +3898,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__input::placeholder {
   font-size: 14px;
   color: white;
+}
+
+.broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__input:focus {
+  -webkit-box-shadow: 0px 0px 4px;
+          box-shadow: 0px 0px 4px;
 }
 
 .broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__lower {
