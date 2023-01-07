@@ -2248,8 +2248,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   overflow-x: hidden;
   background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
   background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-  background: -o-linear-gradient(20deg, white 64%, #5E7390 36%);
-  background: linear-gradient(70deg, white 64%, #5E7390 36%);
+  background: -o-linear-gradient(20deg, #F4FBFF 64%, #5E7390 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
 }
 
 .ap-con {
@@ -2673,6 +2673,15 @@ body:not(.is-using-mouse) .fancybox__container :focus {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+.map__link {
+  position: absolute;
+  right: 70px;
+  bottom: 64px;
+  width: 84px;
+  height: 84px;
+  z-index: 50;
 }
 
 .bg-map {
