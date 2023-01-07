@@ -461,24 +461,7 @@ n.forEach(el => {
 
 // Book don't edit
 
-gsap.utils.toArray(".book-container").forEach((section) => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "30% 70%",
-      end: "30% 50%",
-      scrub: 2,
-      markers: false,
-    },
-  });
-  tl.add("start").to(
-      section.querySelector(".text"),
-      {
-        scale: 1.2,
-      },
-      "start"
-  );
-});
+
 
 const bookHeight = document.querySelector(".twr-title").clientHeight / 2;
 
@@ -512,4 +495,23 @@ gsap.utils.toArray(".book-sticky").forEach((section) => {
       },
       "start"
     );
+});
+
+gsap.utils.toArray(".book-container").forEach((section) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "30% 70%",
+      end: "30% 50%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+  tl.add("start").to(
+      section.querySelector(".text"),
+      {
+        scale: 1.2,
+      },
+      "start"
+  );
 });
