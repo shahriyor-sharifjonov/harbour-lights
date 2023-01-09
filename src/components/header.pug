@@ -24,19 +24,19 @@ mixin header()
                         </svg>
                     .menu-nav__broshure.broshure-open Broshure
                 .mobile-nav
-                    a.menu-con__btn.menu-close.active(href='#about') 
-                        p About
-                    a.menu-con__btn.menu-close(href='#location') 
-                        p Location 
-                    a.menu-con__btn.menu-close(href='#amenities') 
+                    a(href="#amenities").menu-con__btn.menu-close.active
                         p Amenities 
-                    a.menu-con__btn.menu-close(href='#gallery') 
+                    a(href="#about").menu-con__btn.menu-close
+                        p About
+                    a(href="#location").menu-con__btn.menu-close
+                        p Location 
+                    a(href="#gallery").menu-con__btn.menu-close
                         p Gallery 
-                    a.menu-con__btn.menu-close(href='#floorplans') 
+                    a(href="#floorplans").menu-con__btn.menu-close 
                         p Floor plans 
-                    a.menu-con__btn.menu-close(href='#developer') 
+                    a(href="#developer").menu-con__btn.menu-close
                         p reliable developer 
-                    a.menu-con__btn.menu-close(href='#payment') 
+                    a(href="#payment").menu-con__btn.menu-close
                         p PAYMENT PLAN 
                     a(data-number="+971 56 777-77-77")#number.header-number.show-number +971 56 XXX-XX-XX show number
                     .mobile-nav__phone
@@ -81,14 +81,14 @@ mixin header()
                         a(data-number="+971 56 777-77-77")#menu__number.menu__number.show-number +971 56XXX-XX-XX show number
             .menu__rightSide
                 .menu-con
-                    a.menu-con__btn.menu-close.active(href='#')
+                    a.menu-con__btn.menu-close.active(href='#amenities')
+                        p Amenities 
+                    a.menu-con__btn.menu-close(href='#')
                         p Menu
                     a.menu-con__btn.menu-close(href='#')
                         p About
                     a.menu-con__btn.menu-close(href='#')
                         p Location
-                    a.menu-con__btn.menu-close(href='#')
-                        p Amenities
                     a.menu-con__btn.menu-close(href='#')
                         p Gallery
                     a.menu-con__btn.menu-close(href='#')

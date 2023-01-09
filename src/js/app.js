@@ -1,7 +1,5 @@
 import * as functions from "./modules/functions.js";
 
-// import SmoothScroll from 'smoothscroll-for-websites'
-
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
@@ -9,14 +7,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { Draggable } from "gsap/dist/Draggable.js";
 
 import { Fancybox } from "@fancyapps/ui";
-
-// SmoothScroll({
-//     animationTime: 1000,
-//     stepSize: 60,
-//     keyboardSupport: true,
-//     arrowScroll: 100,
-//     touchpadSupport: true
-// })
 
 import Swiper, {
   Autoplay,
@@ -42,18 +32,6 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 
 const body = document.getElementById("body");
 
-function getSamePageAnchor (link) {
-  if (
-    link.protocol !== window.location.protocol ||
-    link.host !== window.location.host ||
-    link.pathname !== window.location.pathname ||
-    link.search !== window.location.search
-  ) {
-    return false;
-  }
-
-  return link.hash;
-}
 gsap.utils.toArray(".places-top").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -129,37 +107,16 @@ gsap.utils.toArray(".book-img").forEach((section) => {
   tl.add("start").fromTo(
     section,
     {
-      x: 100,
+      x: 110,
+      y: 0,
       scale: 0.9,
       ease: "expo.ease",
     },
     {
-      x: 0,
+      x: 30,
+      y: -20,
       scale: 1.1,
       opacity: 1,
-    },
-    "start"
-  );
-});
-
-gsap.utils.toArray(".formInput").forEach((section) => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top 90%",
-      end: "top 70%",
-      scrub: 2,
-      markers: false,
-    },
-    stagger: 0.2,
-  });
-  tl.add("start").from(
-    section,
-    {
-      x: -80,
-      opacity: 0,
-      ease: "expo.ease",
-      stagger: 0.2,
     },
     "start"
   );
@@ -309,14 +266,12 @@ const menu_btn_back = document.querySelectorAll(".menu-close");
 const menu = document.getElementById("menu");
 
 menu_btn.addEventListener("click", () => {
-  console.log("idiot opened");
   menu.classList.add("menuOpened");
   body.style.overflowY = "hidden";
 });
 
 menu_btn_back.forEach((el) => {
   el.addEventListener("click", () => {
-    console.log("idiot closed");
     menu.classList.remove("menuOpened");
     body.style.overflowY = "auto";
   });
@@ -447,6 +402,17 @@ n.forEach((el) => {
   });
 });
 
+const menuBtnActive = document.querySelectorAll('.menu-con__btn')
+
+menuBtnActive?.forEach(el => {
+  el.addEventListener('click',() => {
+    menuBtnActive.forEach(all => {
+      all.classList.remove('active')
+    })
+    el.classList.add('active')
+  })
+})
+
 // Book don't edit
 
 gsap.utils.toArray(".book-container").forEach((section) => {
@@ -520,4 +486,3 @@ gsap.utils.toArray(".book-container").forEach((section) => {
       "start"
   );
 });
-
