@@ -3528,17 +3528,17 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   gap: 64px 128px;
 }
 
-.partners img {
-  width: 206px;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+.partners .partners-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.partners img:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+.partners img {
+  width: 206px;
 }
 
 .footer {
