@@ -428,6 +428,10 @@ menuBtnActive?.forEach((el) => {
 
 // ======= map
 
+const map = document.querySelector('.bg-map')
+
+map.scrollLeft +=300
+
 const maps = () => {
   if (document.querySelectorAll(".map-btn")) {
     const mapBtns = document.querySelectorAll(".map-btn");
@@ -444,6 +448,8 @@ const maps = () => {
           content.classList.remove("active");
         });
         el.classList.add("active");
+        el.scrollLeft = 0
+        el.scrollLeft +=300
       });
     });
   }
