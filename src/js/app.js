@@ -130,37 +130,16 @@ gsap.utils.toArray(".book-img").forEach((section) => {
   tl.add("start").fromTo(
     section,
     {
-      x: 100,
+      x: 110,
+      y: 0,
       scale: 0.9,
       ease: "expo.ease",
     },
     {
-      x: 0,
+      x: 30,
+      y: -20,
       scale: 1.1,
       opacity: 1,
-    },
-    "start"
-  );
-});
-
-gsap.utils.toArray(".formInput").forEach((section) => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top 90%",
-      end: "top 70%",
-      scrub: 2,
-      markers: false,
-    },
-    stagger: 0.2,
-  });
-  tl.add("start").from(
-    section,
-    {
-      x: -80,
-      opacity: 0,
-      ease: "expo.ease",
-      stagger: 0.2,
     },
     "start"
   );

@@ -2348,7 +2348,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   position: absolute;
   top: 0;
   left: 0;
-  rotate: 6deg;
   width: 570px;
 }
 
@@ -4737,7 +4736,6 @@ body {
   .book {
     position: static;
     width: 364.8px;
-    height: 250.4px;
     margin-top: -20px;
     margin-left: -60px;
   }
