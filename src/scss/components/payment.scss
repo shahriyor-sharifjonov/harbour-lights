@@ -90,9 +90,12 @@
     @media (max-width: 768px){
         gap: 54px 54px;
     }
+    .partners-item{
+        display: flex;
+        align-items: center;
+    }
     img{
         width: 206px;
-        transition: .2s;
         @media (max-width: 768px) {
             width: 160px;
         }
@@ -101,9 +104,6 @@
         }
         @media (max-width: 364px) {
             width: 125px;
-        }
-        &:hover{
-            transform: scale(1.1);
         }
     }
 }
