@@ -5,7 +5,7 @@
     .container{
         padding: 80px 20px 140px;
         @media (max-width: 768px) {
-            padding: 64px 15px;
+            padding: 20px 15px 40px;
         }
     }
 }
@@ -22,6 +22,8 @@
     }
     @media (max-width: 768px){
         font-size: 32px;
+        margin-bottom: 10px;
+        line-height: 50px;
     }
 }
 
@@ -33,6 +35,11 @@
     margin-bottom: 100px;
     @media (max-width: 992px) {
         flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 0;
     }
 }
 
@@ -54,6 +61,7 @@
         }
         @media (max-width: 768px) {
             font-size: 72px;
+            line-height: 90px;
         }
     }
     p{
@@ -75,7 +83,8 @@
         font-size: 44px;
     }
     @media (max-width: 768px) {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 }
 

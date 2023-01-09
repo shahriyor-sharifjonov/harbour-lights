@@ -4818,19 +4818,32 @@ html {
   }
 
   .payment .container {
-    padding: 64px 15px;
+    padding: 20px 15px 40px;
   }
 
   .payment-title {
     font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 50px;
+  }
+
+  .percents {
+    margin-bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
   }
 
   .percents-item h3 {
     font-size: 72px;
+    line-height: 90px;
   }
 
   .partners-title {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 30px;
   }
 
   .partners {
