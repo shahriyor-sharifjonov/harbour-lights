@@ -201,6 +201,7 @@
     margin-bottom: 32px;
     text-transform: uppercase;
     color: #000;
+    display: none;
     @include media(575){
         font-weight: 500;
         font-size: 32px;
