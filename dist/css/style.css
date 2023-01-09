@@ -4449,6 +4449,10 @@ html {
     opacity: 1;
   }
 
+  .menuOpened .menu__banner {
+    height: 109vh;
+  }
+
   .menu__container {
     display: none;
   }
@@ -4869,12 +4873,20 @@ html {
 }
 
 @media (max-width: 576px) {
+  .menu-mobile .menu-mobile__content {
+    min-height: 109vh;
+  }
+
   #swiper {
     display: none;
   }
 
   #swiper-mobile {
     display: block;
+  }
+
+  #swiper-mobile .learn-more__block {
+    padding: 30px 20px 50px;
   }
 
   .places-title {
@@ -4930,7 +4942,7 @@ html {
 
 @media (max-width: 575px) {
   .pp-con {
-    padding: 64px 15px;
+    padding: 35px 15px;
   }
 
   .ap-con {
@@ -5101,7 +5113,7 @@ html {
 
 @media (max-width: 520px) {
   .places-paragraph {
-    margin-bottom: 64px;
+    margin-bottom: 35px;
   }
 
   .places-pic-box {
