@@ -369,6 +369,7 @@ broshureClose?.forEach((el) => {
   });
 });
 
+
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
