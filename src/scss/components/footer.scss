@@ -50,22 +50,6 @@
     }
 }
 
-.copyright{
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-    position: relative;
-    z-index: 3;
-    p{
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 29px;
-        text-align: center;
-    }
-}
-
-
-
 .panel-container{
     width: 100%;
     display: flex;
@@ -121,12 +105,12 @@
             }
             .sub__title{
                 color: white;
-                font-size: 24px;
+                font-size: 21px;
                 line-height: 29px;
                 font-weight: 300;
                 text-align: center;
                 @media (max-width: 1200px){
-                    font-size: 21px;
+                    font-size: 19px;
                 }
                 span{
                     color: #83B1EF;

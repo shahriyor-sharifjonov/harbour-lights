@@ -3108,6 +3108,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-bottom: 32px;
   text-transform: uppercase;
   color: #000;
+  display: none;
 }
 
 .floor__item-img {
@@ -3614,21 +3615,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
           align-items: center;
 }
 
-.copyright {
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  position: relative;
-  z-index: 3;
-}
-
-.copyright p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 29px;
-  text-align: center;
-}
-
 .panel-container {
   width: 100%;
   display: -webkit-box;
@@ -3687,7 +3673,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .panel-container .left .logo .sub__title {
   color: white;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 29px;
   font-weight: 300;
   text-align: center;
@@ -4373,7 +4359,7 @@ html {
   }
 
   .panel-container .left .logo .sub__title {
-    font-size: 21px;
+    font-size: 19px;
   }
 
   .panel-container .left .logo .text {
