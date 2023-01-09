@@ -132,8 +132,10 @@
                             background-color: transparent;
                             border: 1px solid #5E7390;
                             color: #5E7390;
+                            text-transform: uppercase;
                             cursor: pointer;
                             outline: none;
+                            transition: .3s;
                             &:hover{
                                 background-color: #5E7390;
                                 color: white;

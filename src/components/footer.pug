@@ -44,11 +44,11 @@ mixin footer()
                                 p.menu__contactUs-title Contact us
                                 .menu-contactUs__title
                                 label(for='footer_name') Full name
-                                input#footer_name.menu__input-text(type='text' placeholder='Your name' name='name')
+                                input#footer_name.menu__input-text(type='text' placeholder='Your name' name='name' required)
                                 label(for='footer_mail') E-mail address
-                                input#footer_mail.menu__input-text(type='email' name='email' placeholder='Your mail')
+                                input#footer_mail.menu__input-text(type='email' name='email' placeholder='Your mail' required)
                                 label(for='footer_phone_number') Phone number
-                                input#footer_phone_number.menu__input-text(type='tel' name='phone' placeholder='Phone number')
+                                input#footer_phone_number.menu__input-text(type='tel' name='phone' placeholder='Phone number' required)
                                 input(type="hidden" name="project" value="harbour_lights")
                                 input(type="hidden" name="description" value="page_form")
                                 input(type="hidden" name="duration" value="").duration
@@ -56,7 +56,7 @@ mixin footer()
                                 input(type="hidden" name="language" value="english")
                                 input(type="hidden" name="current_page" value="")
                                 .menu__lower-btn-con
-                                    input.menu__submit(type='submit' value='Enquire')
+                                    button.menu__submit(type='submit') Enquire
                                     a.about-project-btn(href='#')
                                         <svg width="19" height="16" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.68838 7.25706C1.68838 7.25706 10.2332 3.65814 13.1966 2.39088C14.3327 1.88401 18.1852 0.261909 18.1852 0.261909C18.1852 0.261909 19.9633 -0.447701 19.8151 1.27571C19.7657 1.98539 19.3706 4.46913 18.9755 7.15568C18.3828 10.9574 17.7407 15.1139 17.7407 15.1139C17.7407 15.1139 17.6419 16.2798 16.8022 16.4825C15.9626 16.6853 14.5796 15.7729 14.3327 15.5701C14.135 15.4181 10.6283 13.137 9.34409 12.0219C8.99833 11.7177 8.60322 11.1095 9.39345 10.3998C11.1716 8.72707 13.2954 6.64882 14.5796 5.3309C15.1723 4.7226 15.765 3.3033 13.2954 5.02671C9.78862 7.51052 6.3312 9.84224 6.3312 9.84224C6.3312 9.84224 5.54091 10.3491 4.05918 9.89289C2.57738 9.43675 0.84867 8.82844 0.84867 8.82844C0.84867 8.82844 -0.336661 8.06811 1.68838 7.25706Z"/>
