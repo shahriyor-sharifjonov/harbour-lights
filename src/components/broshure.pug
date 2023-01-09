@@ -20,11 +20,11 @@ mixin broshure()
                         .popup-panel__container
                             p.popup-panel__title Contact us
                             label(for='popup-name') Full name
-                            input#popup-name.popup__input(type='text' placeholder='Your name' name='name')
+                            input#popup-name.popup__input(type='text' placeholder='Your name' name='name' required)
                             label(for='popup-mail') E-mail address
-                            input#popup-mail.popup__input(type='email' name='email' placeholder='Your mail')
+                            input#popup-mail.popup__input(type='email' name='email' placeholder='Your mail' required)
                             label(for='popup-phone_number') Phone number
-                            input#popup-phone_number.popup__input(type='tel' name='phone' placeholder='Phone number')
+                            input#popup-phone_number.popup__input(type='tel' name='phone' placeholder='Phone number' required)
                             input(type="hidden" name="project" value="harbour_lights")
                             input(type="hidden" name="description" value="page_form")
                             input(type="hidden" name="duration" value="").duration
@@ -32,7 +32,7 @@ mixin broshure()
                             input(type="hidden" name="language" value="english")
                             input(type="hidden" name="current_page" value="")
                             .popup__lower
-                                input.popup__submit(type='submit' value='Enquire')
+                                button.popup__submit(type='submit') Enquire
                                 a.popup__btns(href='#')
                                     <svg width="19" height="17" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.68448 8.06174C1.68448 8.06174 10.2292 4.46283 13.1927 3.19557C14.3288 2.6887 18.1813 1.0666 18.1813 1.0666C18.1813 1.0666 19.9594 0.356987 19.8112 2.0804C19.7618 2.79008 19.3667 5.27382 18.9716 7.96037C18.3788 11.7621 17.7368 15.9186 17.7368 15.9186C17.7368 15.9186 17.638 17.0845 16.7983 17.2872C15.9587 17.49 14.5757 16.5776 14.3288 16.3748C14.1311 16.2228 10.6244 13.9417 9.34018 12.8265C8.99443 12.5224 8.59932 11.9142 9.38954 11.2045C11.1677 9.53176 13.2915 7.45351 14.5757 6.13559C15.1684 5.52728 15.7611 4.10799 13.2915 5.8314C9.78472 8.31521 6.3273 10.6469 6.3273 10.6469C6.3273 10.6469 5.53701 11.1538 4.05528 10.6976C2.57348 10.2414 0.844764 9.63313 0.844764 9.63313C0.844764 9.63313 -0.340567 8.8728 1.68448 8.06174Z" fill="white"/>

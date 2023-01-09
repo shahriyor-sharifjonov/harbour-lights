@@ -21,7 +21,6 @@
   }
   .gallery-slide {
     flex-shrink: 0;
-    cursor: pointer;
   }
   .gallery-slide {
     width: 100%;
@@ -47,6 +46,7 @@
         height: 100%;
         max-height: 1080px;
         width: 100%;
+        cursor: pointer;
         @media (max-width: 1024px) {
           max-height: 100%;
         }

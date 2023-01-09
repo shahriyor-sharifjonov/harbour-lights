@@ -430,12 +430,17 @@
     border: 0;
     color: white;
     text-transform: uppercase;
+    transition: .3s;
     cursor: pointer;
 }
 
 .menu__submit::placeholder{
     font-size: 16px;
     color: rgb(0,0,0,.35);
+}
+
+.menu__submit:hover{
+    background-color: #8091a8;
 }
 
 .submit::placeholder{
@@ -481,12 +486,17 @@
     color: white;
 }
 
+
 .menu__about-project-btn i{
     font-size: 25px;
 }
 
 .telegram-btn{
     background-color: #5E7390;
+}
+
+.telegram-btn:hover{
+    background-color: #8091a8;
 }
 
 .about-project-btn svg{

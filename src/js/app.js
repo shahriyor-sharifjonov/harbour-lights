@@ -42,19 +42,18 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 
 const body = document.getElementById("body");
 
-window.onload = function () {
-  var a = document.getElementsByTagName("a"),
-    i = a.length;
-
-  while (i--) {
-    a[i].onclick = (function () {
-      return function () {
-        return false;
-      };
-    })();
+function getSamePageAnchor (link) {
+  if (
+    link.protocol !== window.location.protocol ||
+    link.host !== window.location.host ||
+    link.pathname !== window.location.pathname ||
+    link.search !== window.location.search
+  ) {
+    return false;
   }
-};
 
+  return link.hash;
+}
 gsap.utils.toArray(".places-top").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {

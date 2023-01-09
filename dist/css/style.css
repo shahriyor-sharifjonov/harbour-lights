@@ -1598,6 +1598,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   border: 0;
   color: white;
   text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -1624,6 +1627,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .menu__submit::placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.35);
+}
+
+.menu__submit:hover {
+  background-color: #8091a8;
 }
 
 .submit::-webkit-input-placeholder {
@@ -1715,6 +1722,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .telegram-btn {
   background-color: #5E7390;
+}
+
+.telegram-btn:hover {
+  background-color: #8091a8;
 }
 
 .about-project-btn svg {
@@ -1874,8 +1885,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 #swiper-mobile .learn-more__block p span {
   color: #5E7390;
-  white-space: nowrap;
   font-family: "Tenor Sans", sans-serif;
+  display: block;
 }
 
 #swiper-mobile .learn-more__block button {
@@ -2816,7 +2827,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .gallery .gallery-slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  cursor: pointer;
 }
 
 .gallery .gallery-slide {
@@ -2845,6 +2855,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   max-height: 1080px;
   width: 100%;
+  cursor: pointer;
 }
 
 .gallery .gallery-slide.first {
@@ -3938,8 +3949,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   background-color: transparent;
   border: 1px solid #5E7390;
   color: #5E7390;
+  text-transform: uppercase;
   cursor: pointer;
   outline: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .broshure-con .popup .popup__container .popup__panel .popup-panel__container .popup__lower .popup__submit:hover {
