@@ -238,28 +238,6 @@ const tabs = () => {
 };
 tabs();
 
-const maps = () => {
-  if (document.querySelectorAll(".map-btn")) {
-    const mapBtns = document.querySelectorAll(".map-btn");
-    const maps = document.querySelectorAll(".bg-map");
-    mapBtns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        const target = btn.getAttribute("data-target");
-        const el = document.querySelector(target);
-        mapBtns.forEach((btn) => {
-          btn.classList.remove("active");
-        });
-        e.target.classList.add("active");
-        maps.forEach((content) => {
-          content.classList.remove("active");
-        });
-        el.classList.add("active");
-      });
-    });
-  }
-};
-maps();
-
 new Swiper(".floor__swiper", {
   modules: [Navigation, EffectFade],
   slidesPerView: 1,
@@ -340,7 +318,6 @@ broshureClose?.forEach((el) => {
   });
 });
 
-const towersHeight = document.querySelector(".twr-sticky").clientHeight / 2;
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -451,6 +428,30 @@ menuBtnActive?.forEach((el) => {
     el.classList.add("active");
   });
 });
+
+// ======= map
+
+const maps = () => {
+  if (document.querySelectorAll(".map-btn")) {
+    const mapBtns = document.querySelectorAll(".map-btn");
+    const maps = document.querySelectorAll(".bg-map");
+    mapBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const target = btn.getAttribute("data-target");
+        const el = document.querySelector(target);
+        mapBtns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        e.target.classList.add("active");
+        maps.forEach((content) => {
+          content.classList.remove("active");
+        });
+        el.classList.add("active");
+      });
+    });
+  }
+};
+maps();
 
 // Book don't edit
 

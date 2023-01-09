@@ -2094,7 +2094,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  padding: 80px 20px 180px;
+  padding: 80px 20px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2274,10 +2274,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 528px;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: -o-linear-gradient(20deg, #F4FBFF 64%, #24303D 36%);
-  background: linear-gradient(70deg, #F4FBFF 64%, #24303D 36%);
-  background: -o-linear-gradient(20deg, #F4FBFF 64%, #5E7390 36%);
-  background: linear-gradient(70deg, #F4FBFF 64%, #5E7390 36%);
+  background: -o-linear-gradient(20deg, #F4FBFF 64%, #37485A 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #37485A 36%);
+  background: linear-gradient(70deg, #F4FBFF 64%, #37485A 36%);
 }
 
 .ap-con {
@@ -4490,9 +4489,9 @@ html {
   }
 
   .about-project {
-    background-image: -webkit-gradient(linear, right top, left top, from(#5E7390), to(#5E7390));
-    background-image: -o-linear-gradient(right, #5E7390 0%, #5E7390 100%);
-    background-image: linear-gradient(270deg, #5E7390 0%, #5E7390 100%);
+    background-image: -webkit-gradient(linear, right top, left top, from(#37485A), to(#37485A));
+    background-image: -o-linear-gradient(right, #37485A 0%, #37485A 100%);
+    background-image: linear-gradient(270deg, #37485A 0%, #37485A 100%);
     position: relative;
     overflow: hidden;
   }
