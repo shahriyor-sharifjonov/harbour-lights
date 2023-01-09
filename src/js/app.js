@@ -1,7 +1,5 @@
 import * as functions from "./modules/functions.js";
 
-// import SmoothScroll from 'smoothscroll-for-websites'
-
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
@@ -9,14 +7,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { Draggable } from "gsap/dist/Draggable.js";
 
 import { Fancybox } from "@fancyapps/ui";
-
-// SmoothScroll({
-//     animationTime: 1000,
-//     stepSize: 60,
-//     keyboardSupport: true,
-//     arrowScroll: 100,
-//     touchpadSupport: true
-// })
 
 import Swiper, {
   Autoplay,
@@ -289,14 +279,12 @@ const menu_btn_back = document.querySelectorAll(".menu-close");
 const menu = document.getElementById("menu");
 
 menu_btn.addEventListener("click", () => {
-  console.log("idiot opened");
   menu.classList.add("menuOpened");
   body.style.overflowY = "hidden";
 });
 
 menu_btn_back.forEach((el) => {
   el.addEventListener("click", () => {
-    console.log("idiot closed");
     menu.classList.remove("menuOpened");
     body.style.overflowY = "auto";
   });
@@ -426,6 +414,17 @@ n.forEach((el) => {
     },
   });
 });
+
+const menuBtnActive = document.querySelectorAll('.menu-con__btn')
+
+menuBtnActive?.forEach(el => {
+  el.addEventListener('click',() => {
+    menuBtnActive.forEach(all => {
+      all.classList.remove('active')
+    })
+    el.classList.add('active')
+  })
+})
 
 // Book don't edit
 
