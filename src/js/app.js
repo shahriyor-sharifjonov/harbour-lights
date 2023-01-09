@@ -32,7 +32,6 @@ SmoothScroll({
 
 gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
 
-
 const tlMenu = gsap.timeline({ paused: true });
 
 const btnToggler = document.querySelector(".menu-nav__menu");
@@ -68,6 +67,60 @@ document.querySelectorAll('a[href]').forEach((a) => {
     toggleMenu();
   });
 });
+
+// ============= gallery
+
+(function gsapMatchMedia() {
+  ScrollTrigger.matchMedia({
+    all: function () {},
+    // 2500 - 1025
+    "(max-width: 2500px) and (min-width: 1025px)": function () {
+      let sections = gsap.utils.toArray(".gallery-slide");
+
+      gsap.to(sections, {
+        xPercent: -92.5 * (sections.length - 1),
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".gallery",
+          pin: true,
+          scrub: true,
+          start: "top 0%",
+          end: "+=10000",
+        },
+      });
+    },
+    // 1024 - 577
+    "(max-width: 1024px) and (min-width: 577px)": function () {
+      let sections = gsap.utils.toArray(".gallery-slide");
+      gsap.to(sections, {
+        xPercent: -96 * (sections.length - 1),
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".gallery",
+          pin: true,
+          scrub: true,
+          start: "top 0%",
+          end: "+=10000",
+        },
+      });
+    },
+    // 576 - 320
+    "(max-width: 576px) and (min-width: 320px)": function () {
+      let sections = gsap.utils.toArray(".gallery-slide");
+      gsap.to(sections, {
+        xPercent: -96 * (sections.length - 1),
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".gallery",
+          pin: true,
+          scrub: true,
+          start: "top 0%",
+          end: "+=10000",
+        },
+      });
+    },
+  });
+})();
 
 const body = document.getElementById("body");
 
@@ -181,8 +234,6 @@ gsap.utils.toArray(".developerAnim").forEach((section) => {
     "start"
   );
 });
-
-functions.isWebp();
 
 const swiper = new Swiper(".mySwiper", {
   modules: [Navigation],
@@ -337,60 +388,6 @@ gsap.utils.toArray(".twr-sticky").forEach((section) => {
     "start"
   );
 });
-
-// ============= gallery
-
-(function gsapMatchMedia() {
-  ScrollTrigger.matchMedia({
-    all: function () {},
-    // 2500 - 1025
-    "(max-width: 2500px) and (min-width: 1025px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
-
-      gsap.to(sections, {
-        xPercent: -92.5 * (sections.length - 1),
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".gallery",
-          pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=10000",
-        },
-      });
-    },
-    // 1024 - 577
-    "(max-width: 1024px) and (min-width: 577px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
-      gsap.to(sections, {
-        xPercent: -96 * (sections.length - 1),
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".gallery",
-          pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=10000",
-        },
-      });
-    },
-    // 576 - 320
-    "(max-width: 576px) and (min-width: 320px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
-      gsap.to(sections, {
-        xPercent: -96 * (sections.length - 1),
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".gallery",
-          pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=10000",
-        },
-      });
-    },
-  });
-})();
 
 function format_number(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
