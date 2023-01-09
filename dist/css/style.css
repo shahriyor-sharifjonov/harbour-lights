@@ -2359,7 +2359,6 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   position: absolute;
   top: 0;
   left: 0;
-  rotate: 6deg;
   width: 570px;
 }
 
@@ -4217,6 +4216,10 @@ body {
   min-width: 370px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #D9D9D9;
@@ -4752,7 +4755,6 @@ body {
   .book {
     position: static;
     width: 364.8px;
-    height: 250.4px;
     margin-top: -20px;
     margin-left: -60px;
   }

@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js'
+
 import { Draggable } from "gsap/dist/Draggable.js";
 
 import { Fancybox } from "@fancyapps/ui";
@@ -28,7 +30,44 @@ SmoothScroll({
   touchpadSupport: true,
 });
 
-gsap.registerPlugin(ScrollTrigger, Draggable);
+gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
+
+
+const tlMenu = gsap.timeline({ paused: true });
+
+const btnToggler = document.querySelector(".menu-nav__menu");
+btnToggler.addEventListener("click", toggleMenu);
+function toggleMenu() {
+  tlMenu.reversed() ? tlMenu.timeScale(1).play() : tlMenu.timeScale(2).reverse();
+  btnToggler.classList.toggle('open')
+}
+tlMenu.reverse();
+
+function getSamePageAnchor(link) {
+  if (
+    link.protocol !== window.location.protocol ||
+    link.host !== window.location.host ||
+    link.pathname !== window.location.pathname ||
+    link.search !== window.location.search
+  ) {
+    return false;
+  }
+
+  return link.hash;
+}
+function scrollToHash(hash, e) {
+  const elem = hash ? document.querySelector(hash) : false;
+  if (elem) {
+    if (e) e.preventDefault();
+    gsap.to(window, { duration: 0, scrollTo: elem });
+  }
+}
+document.querySelectorAll('a[href]').forEach((a) => {
+  a.addEventListener("click", (e) => {
+    scrollToHash(getSamePageAnchor(a), e);
+    toggleMenu();
+  });
+});
 
 const body = document.getElementById("body");
 
@@ -162,7 +201,7 @@ const autoSwiper = new Swiper(".twrSwiper", {
     type: "progressbar",
   },
   autoplay: {
-    delay: 2000, 
+    delay: 2000,
   },
 });
 
@@ -402,16 +441,16 @@ n.forEach((el) => {
   });
 });
 
-const menuBtnActive = document.querySelectorAll('.menu-con__btn')
+const menuBtnActive = document.querySelectorAll(".menu-con__btn");
 
-menuBtnActive?.forEach(el => {
-  el.addEventListener('click',() => {
-    menuBtnActive.forEach(all => {
-      all.classList.remove('active')
-    })
-    el.classList.add('active')
-  })
-})
+menuBtnActive?.forEach((el) => {
+  el.addEventListener("click", () => {
+    menuBtnActive.forEach((all) => {
+      all.classList.remove("active");
+    });
+    el.classList.add("active");
+  });
+});
 
 // Book don't edit
 
@@ -479,10 +518,10 @@ gsap.utils.toArray(".book-container").forEach((section) => {
     },
   });
   tl.add("start").to(
-      section.querySelector(".text"),
-      { 
-        scale: 1.2,
-      },
-      "start"
+    section.querySelector(".text"),
+    {
+      scale: 1.2,
+    },
+    "start"
   );
 });
