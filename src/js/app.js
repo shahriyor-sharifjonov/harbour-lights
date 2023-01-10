@@ -32,6 +32,89 @@ SmoothScroll({
 
 gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
 
+
+// Preloader
+
+const preloader = document.querySelector('#preloader');
+let weekDay = document.querySelector('.preloader-calendar-week');
+let calendarLogo = document.querySelector('.preloader-calendar-logo');
+
+let secWrap = document.querySelector('.preloader-numbers');
+let secspan = document.querySelector('.preloader-numbers .preloader-num');
+let secspans = document.querySelectorAll('.preloader-num');
+
+let calHours = document.querySelector('.preloader-calendar-hours');
+let calMinutes = document.querySelector('.preloader-calendar-minutes');
+let calDay = document.querySelector('.preloader-calendar-day');
+let calWeek = document.querySelector('.preloader-calendar-week');
+let calYear = document.querySelector('.preloader-calendar-year');
+
+
+let sec = 1;
+const secspanHeight = secspan.clientHeight;
+
+while (sec <= 100) {
+    let span = document.createElement('span');
+    span.textContent = sec;
+    span.setAttribute("class", "preloader-num");
+    secWrap.appendChild(span);
+    sec++;
+}
+var i = 0;
+window.setInterval(function () {
+    i = i + 1;
+    if (i <= 100) {
+        secWrap.style.transform = `translateY(-${secspanHeight * i}px)`;
+    }
+}, 1000);
+
+
+setTimeout(calendarLogo.classList.add('active'), 1000);
+
+// Get Time
+const d = new Date();
+
+const theYear = d.getFullYear();
+calYear.innerHTML = theYear;
+
+const weekday = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+let week = weekday[d.getDay()];
+calWeek.innerHTML = week;
+
+let currentDay = d.getDate();
+if (currentDay <= 9) {
+    let exactDay = '0' + currentDay
+    calDay.innerHTML = exactDay;
+} else {
+    calDay.innerHTML = currentDay;
+}
+
+function digitalClock() {
+
+    var d = new Date();
+    var hours = d.getHours();
+    hours = addZero(hours);
+    var minutes = d.getMinutes();
+    minutes = addZero(minutes);
+
+    calHours.innerHTML = hours;
+    calMinutes.innerHTML = minutes;
+}
+
+function addZero(i) {
+    if (i < 10) {
+        i = '0' + i;
+    }
+    return i;
+}
+
+setInterval(digitalClock, 1000);
+
+window.addEventListener('load', function (event) {
+    document.body.classList.add('loaded');
+});
+
+
 const tlMenu = gsap.timeline({ paused: true });
 
 const btnToggler = document.querySelector(".menu-nav__menu");
@@ -108,14 +191,14 @@ document.querySelectorAll('a[href]').forEach((a) => {
     "(max-width: 576px) and (min-width: 320px)": function () {
       let sections = gsap.utils.toArray(".gallery-slide");
       gsap.to(sections, {
-        xPercent: -96 * (sections.length - 1),
+        xPercent: -90 * (sections.length - 1),
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".gallery",
           pin: true,
           scrub: true,
           start: "top 0%",
-          end: "+=10000",
+          end: "+=1000",
         },
       });
     },

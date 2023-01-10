@@ -1,0 +1,25 @@
+mixin preloader()
+    .no-webp
+        .preloader#preloader
+            .preloader-sekun
+                .preloader-numbers
+                    span.preloader-num 0
+            .preloader-calendar
+                .preloader-calendar-inner
+                    .preloader-calendar-logo
+                        img(src='img/loader-logo.svg' alt='logo' draggable='false')
+                    div(style='width: 100%;')
+                        .preloader-calendar-time
+                            .preloader-calendar-hours
+                                | 00
+                            .preloader-calendar-minutes
+                                | 00
+                        .preloader-calendar-days
+                            span.preloader-calendar-day
+                                | 01
+                            span.preloader-calendar-week
+                                | Mon
+                            span.preloader-calendar-year
+                            | 2023
+                    .preloader-loading
+                        | Content is loading

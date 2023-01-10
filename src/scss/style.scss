@@ -5,6 +5,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
+// @import './preloader';
 
 @import 'node_modules/@fancyapps/ui/dist/fancybox';
 
@@ -25,7 +26,8 @@
     'components/book',
     'components/payment',
     'components/footer',
-    'components/broshure';
+    'components/broshure',
+    'components/preloader';
 
 
 
@@ -51,12 +53,22 @@
 }
 
 body{
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: black;
     cursor: default;
     padding-top: var(--header-height);
     min-width: 370px;
 }
+
+body.loaded {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+// body.loaded #preloader {
+//     opacity: 0;
+//     transform: translateY(-100%);
+// }
 
 html{
     scroll-behavior: smooth;
