@@ -2730,6 +2730,18 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   overflow: hidden;
 }
 
+.map__text {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  -webkit-animation: example 1s ease-in-out infinite;
+          animation: example 1s ease-in-out infinite;
+}
+
 .map__link {
   position: absolute;
   right: 70px;
@@ -2737,6 +2749,34 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 84px;
   height: 84px;
   z-index: 50;
+}
+
+@-webkit-keyframes example {
+  0% {
+    bottom: 20px;
+  }
+
+  50% {
+    bottom: 25px;
+  }
+
+  100% {
+    bottom: 20px;
+  }
+}
+
+@keyframes example {
+  0% {
+    bottom: 20px;
+  }
+
+  50% {
+    bottom: 25px;
+  }
+
+  100% {
+    bottom: 20px;
+  }
 }
 
 .bg-map {
@@ -2763,18 +2803,18 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .bg-map::-webkit-scrollbar {
+  background-color: transparent;
+  position: relative;
+  border-radius: 4px;
   height: 8px;
+  bottom: 10px;
   background-color: #B5B5B5;
-  border-radius: 4px;
-}
-
-.bg-map::-webkit-scrollbar-track {
-  border-radius: 4px;
 }
 
 .bg-map::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 4px;
+  height: 4px;
 }
 
 .bg-map::-webkit-scrollbar-thumb:hover {
@@ -4583,6 +4623,10 @@ html {
 
   .map-title p {
     font-size: 56px;
+  }
+
+  .map__text {
+    display: block;
   }
 
   .bg-map img {
