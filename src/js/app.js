@@ -440,6 +440,7 @@ const broshureOpen = document.querySelectorAll(".broshure-open");
 const broshureClose = document.querySelectorAll(".broshure-close");
 const broshureContainer = document.getElementById("broshureContainer");
 
+
 broshureOpen?.forEach((el) => {
   el.addEventListener("click", () => {
     broshureContainer.classList.add("opening");
@@ -470,6 +471,30 @@ modalFloorClose?.forEach((el) => {
   });
 });
 
+
+const floorModal = document.getElementById('floor-plan__modal')
+
+document.querySelectorAll('.floor-modal__open').forEach(el => {
+  el.addEventListener('click',() => {
+    floorModal.classList.add('floor-plan__opened')
+  })
+})
+
+document.querySelectorAll('.floor-modal__close').forEach(el => {
+  el.addEventListener('click',() => {
+    floorModal.classList.remove('floor-plan__opened')
+  })
+})
+
+document.querySelectorAll('.floor__item-btn')?.forEach(el => {
+  el.addEventListener('click',() => {
+    const dataNumber = el.getAttribute('data-number')
+    const srclnk = 'img/'+dataNumber 
+    document.querySelectorAll(".floor-plan__img").forEach(elem => {
+      elem.setAttribute("src", srclnk)
+    })
+  })
+})
 
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
