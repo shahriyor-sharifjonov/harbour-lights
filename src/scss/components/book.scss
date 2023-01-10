@@ -61,6 +61,15 @@
             bottom: 0;
             color: white;
             font-size: 48px;
+            @media (max-width: 992px) {
+                font-size: 40px;
+            }
+            @media (max-width: 768px) {
+                font-size: 32px;
+            }
+            @media (max-width: 576px) {
+                font-size: 26px;
+            }
             p{
                 font-family: 'Tenor Sans', sans-serif;
             }

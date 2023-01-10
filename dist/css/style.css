@@ -5283,6 +5283,10 @@ html {
     height: 42px;
   }
 
+  .book-container .book-sticky .text {
+    font-size: 40px;
+  }
+
   .payment-title {
     font-size: 44px;
   }
@@ -5565,6 +5569,10 @@ html {
     display: none;
   }
 
+  .book-container .book-sticky .text {
+    font-size: 32px;
+  }
+
   .payment .container {
     padding: 20px 15px 40px;
   }
@@ -5762,6 +5770,10 @@ html {
 
   .gallery .gallery-slide--mob {
     display: block;
+  }
+
+  .book-container .book-sticky .text {
+    font-size: 26px;
   }
 }
 
