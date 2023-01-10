@@ -842,6 +842,18 @@
       aspect-ratio: 16/9;
       object-fit: cover;
     }
+    .desktop{
+      display: block;
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .mobile{
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
     .toning{
       box-shadow: 10px 0 120px 120px rgba(0, 0, 0, 0.7);
       position: absolute;
