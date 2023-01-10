@@ -61,7 +61,7 @@ body{
 }
 
 body.loaded {
-    overflow: auto;
+    overflow: overlay;
     overflow-x: hidden;
 }
 
