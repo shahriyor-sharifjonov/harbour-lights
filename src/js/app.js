@@ -471,8 +471,7 @@ document.querySelectorAll('.floor-modal__close').forEach(el => {
 document.querySelectorAll('.floor__item-btn')?.forEach(el => {
   el.addEventListener('click',() => {
     const dataNumber = el.getAttribute('data-number')
-    const srclnk = 'img/'+dataNumber
-    console.log(srclnk);
+    const srclnk = 'img/'+dataNumber 
     document.querySelector(".floor-plan__img").setAttribute("src", srclnk)
   })
 })
