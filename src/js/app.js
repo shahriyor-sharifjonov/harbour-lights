@@ -440,6 +440,10 @@ const broshureOpen = document.querySelectorAll(".broshure-open");
 const broshureClose = document.querySelectorAll(".broshure-close");
 const broshureContainer = document.getElementById("broshureContainer");
 
+setTimeout(() => {
+    broshureContainer.classList.add("opening");
+},40000)
+
 broshureOpen?.forEach((el) => {
   el.addEventListener("click", () => {
     broshureContainer.classList.add("opening");
