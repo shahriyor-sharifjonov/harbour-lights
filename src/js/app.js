@@ -252,7 +252,7 @@ const autoSwiper = new Swiper(".twrSwiper", {
     type: "progressbar",
   },
   autoplay: {
-    delay: 2000,
+    delay: 6000,
   },
 });
 
