@@ -4807,6 +4807,10 @@ html {
     padding: 60px 60px;
   }
 
+  .map-title {
+    padding: 0 15px 64px;
+  }
+
   .floor__navigation {
     width: 520px;
   }
