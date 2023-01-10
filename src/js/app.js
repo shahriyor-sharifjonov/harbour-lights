@@ -335,7 +335,7 @@ const autoSwiper = new Swiper(".twrSwiper", {
     type: "progressbar",
   },
   autoplay: {
-    delay: 2000,
+    delay: 6000,
   },
 });
 
@@ -514,7 +514,7 @@ menuBtnActive?.forEach((el) => {
 
 const map = document.querySelector('.bg-map')
 
-map.scrollLeft +=300
+map.scrollLeft +=150
 
 const maps = () => {
   if (document.querySelectorAll(".map-btn")) {
@@ -533,7 +533,7 @@ const maps = () => {
         });
         el.classList.add("active");
         el.scrollLeft = 0
-        el.scrollLeft +=300
+        el.scrollLeft +=150
       });
     });
   }
