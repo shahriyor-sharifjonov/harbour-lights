@@ -452,6 +452,24 @@ broshureClose?.forEach((el) => {
   });
 });
 
+// Modal
+
+const modalFloorOpen = document.querySelectorAll(".modal__open");
+const modalFloorClose = document.querySelectorAll(".modal__close");
+const modalFloor = document.getElementById("modal");
+
+modalFloorOpen?.forEach((el) => {
+  el.addEventListener("click", () => {
+    modalFloor.classList.add("modal-opening");
+  });
+});
+
+modalFloorClose?.forEach((el) => {
+  el.addEventListener("click", () => {
+    modalFloor.classList.remove("modal-opening");
+  });
+});
+
 
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
