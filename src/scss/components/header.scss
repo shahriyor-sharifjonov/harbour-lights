@@ -255,7 +255,7 @@
     }
     @include media(992){
         .menu__banner{
-            height: 109vh;
+            height: 100vh;
         }
     }
 }
@@ -539,7 +539,7 @@
         left: 0;
         background-color: rgba(0, 0, 0, 0.8);
         @media (max-width: 576px) {
-            min-height: 109vh;
+            min-height: 100vh;
         }
         .top{
             width: 100%;

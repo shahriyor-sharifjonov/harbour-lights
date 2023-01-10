@@ -4523,7 +4523,7 @@ html {
   }
 
   .menuOpened .menu__banner {
-    height: 109vh;
+    height: 100vh;
   }
 
   .menu__container {
@@ -4978,7 +4978,7 @@ html {
 
 @media (max-width: 576px) {
   .menu-mobile .menu-mobile__content {
-    min-height: 109vh;
+    min-height: 100vh;
   }
 
   #swiper {
