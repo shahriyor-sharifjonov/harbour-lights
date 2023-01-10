@@ -4635,6 +4635,13 @@ body.loaded {
   overflow-x: hidden;
 }
 
+body.loaded #preloader {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 html {
   scroll-behavior: smooth;
 }

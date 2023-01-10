@@ -65,10 +65,10 @@ body.loaded {
     overflow-x: hidden;
 }
 
-// body.loaded #preloader {
-//     opacity: 0;
-//     transform: translateY(-100%);
-// }
+body.loaded #preloader {
+    opacity: 0;
+    transform: translateY(-100%);
+}
 
 html{
     scroll-behavior: smooth;
