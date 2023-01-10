@@ -472,7 +472,9 @@ document.querySelectorAll('.floor__item-btn')?.forEach(el => {
   el.addEventListener('click',() => {
     const dataNumber = el.getAttribute('data-number')
     const srclnk = 'img/'+dataNumber 
-    document.querySelector(".floor-plan__img").setAttribute("src", srclnk)
+    document.querySelectorAll(".floor-plan__img").forEach(elem => {
+      elem.setAttribute("src", srclnk)
+    })
   })
 })
 

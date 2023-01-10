@@ -4320,6 +4320,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   position: absolute;
   right: 20px;
   top: 20px;
+  cursor: pointer;
 }
 
 .floor-plan__modal-left {
