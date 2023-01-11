@@ -121,6 +121,9 @@
                             box-shadow: 0px 0px 4px;
                         }
                     }
+                    #popup-phone_number{
+                        padding-left: 50px;
+                    }
                     .popup__lower{
                         width: 100%;
                         height: 42px;
@@ -376,6 +379,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @media (max-width: 1440px) and (max-height: 700px) {
+                padding: 50px 40px;
+            }
             @media (max-width: 992px) {
                 width: calc(100% - 480px);
             }
@@ -383,6 +389,10 @@
                 width: 100%;
                 max-width: 600px;
                 height: auto;
+            }
+            .menu__input-text {
+                margin-bottom: 20px;
+                margin-top: 10px;
             }
             .floor-mobile{
                 display: none;
@@ -405,6 +415,12 @@
                     border-radius: 20px;
                     box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
                 }
+            }
+            #menu-phone_number{
+                margin-top: 10px !important;
+            }
+            .iti__flag-container {
+                top: 10px;
             }
             .menu__submit{
                 max-width: calc(100% - 186px);
@@ -434,7 +450,7 @@
                 color: white;
                 font-size: 16px;
                 font-weight: 400;
-                padding: 10px 0;
+                padding: 10px 0 0;
             }
         }
         &-logo{
