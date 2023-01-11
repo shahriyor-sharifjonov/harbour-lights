@@ -436,6 +436,10 @@ numberClass?.forEach((el) => {
   });
 });
 
+setTimeout(() => {
+  broshureContainer.classList.add("opening");
+},60000)
+
 const broshureOpen = document.querySelectorAll(".broshure-open");
 const broshureClose = document.querySelectorAll(".broshure-close");
 const broshureContainer = document.getElementById("broshureContainer");
@@ -462,12 +466,14 @@ const modalFloor = document.getElementById("modal");
 modalFloorOpen?.forEach((el) => {
   el.addEventListener("click", () => {
     modalFloor.classList.add("modal-opening");
+    body.style.overflowY = "hidden";
   });
 });
 
 modalFloorClose?.forEach((el) => {
   el.addEventListener("click", () => {
     modalFloor.classList.remove("modal-opening");
+    body.style.overflowY = "auto";
   });
 });
 
@@ -477,12 +483,14 @@ const floorModal = document.getElementById('floor-plan__modal')
 document.querySelectorAll('.floor-modal__open').forEach(el => {
   el.addEventListener('click',() => {
     floorModal.classList.add('floor-plan__opened')
+    body.style.overflowY = "hidden";
   })
 })
 
 document.querySelectorAll('.floor-modal__close').forEach(el => {
   el.addEventListener('click',() => {
     floorModal.classList.remove('floor-plan__opened')
+    body.style.overflowY = "auto";
   })
 })
 

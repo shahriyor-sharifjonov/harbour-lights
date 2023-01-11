@@ -5,7 +5,7 @@ mixin intro()
                 .swiper-wrapper
                     .swiper-slide
                         .toning
-                        video.banner-video(muted='' loop='' autoplay='')
+                        video.banner-video(muted='' loop='' playsinline='' autoplay='')
                             source(src='./files/banner-video.mp4' type='video/mp4')
                     .swiper-slide
                         .toning
@@ -19,7 +19,7 @@ mixin intro()
                 p
                     |  TOWER <br /> IN DUBAI
                     span.learn-more-span MARITIME <br class="learn-more__br" /> CITY
-                button learn more
+                button.modal__open learn more
         #swiper.swiper.mySwiper
             .swiper-wrapper.swiperWrapper
                 .swiper-slide
@@ -32,7 +32,7 @@ mixin intro()
                                     |  TOWER <br /> IN DUBAI
                                     span.learn-more-span MARITIME CITY
                                 .learn-more-btn
-                                    a(href='#') Learn more
+                                    a(href='#').modal__open Learn more
                     .view-project
                         a(href='#')
                             | view project
@@ -50,7 +50,7 @@ mixin intro()
                                     |  TOWER <br /> IN DUBAI
                                     span.learn-more-span MARITIME CITY
                                 .learn-more-btn
-                                    a(href='#') Learn more
+                                    a(href='#').modal__open Learn more
                     .view-project
                         a(href='#')
                             | view project
