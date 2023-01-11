@@ -453,6 +453,10 @@ broshureClose?.forEach((el) => {
   });
 });
 
+setTimeout(() => {
+  broshureContainer.classList.add("opening");
+},5000)
+
 
 const floorModal = document.getElementById('floor-plan__modal')
 
@@ -470,10 +474,16 @@ document.querySelectorAll('.floor-modal__close').forEach(el => {
 
 document.querySelectorAll('.floor__item-btn')?.forEach(el => {
   el.addEventListener('click',() => {
-    const dataNumber = el.getAttribute('data-number')
-    const srclnk = 'img/'+dataNumber 
+    const img = el.parentElement.parentElement.querySelector(".floor__item-img").querySelector('img');
+    const from = el.parentElement.parentElement.querySelector(".floor__price");
+    const price = 'Starting from '+ from.innerHTML +' AED';
+    console.log(price);
+    document.querySelectorAll('.floor-plan__from')?.forEach(fromFor => {
+      fromFor.innerHTML = price
+    })
+    const src = img.getAttribute('src');
     document.querySelectorAll(".floor-plan__img").forEach(elem => {
-      elem.setAttribute("src", srclnk)
+      elem.setAttribute("src", src)
     })
   })
 })
