@@ -495,15 +495,15 @@ document.querySelectorAll(".floor-modal__close").forEach((el) => {
   });
 });
 
-document.querySelectorAll(".floor__item-btn")?.forEach((el) => {
-  el.addEventListener("click", () => {
-    const dataNumber = el.getAttribute("data-number");
-    const srclnk = "img/" + dataNumber;
-    document.querySelectorAll(".floor-plan__img").forEach((elem) => {
-      elem.setAttribute("src", srclnk);
-    });
-  });
-});
+document.querySelectorAll('.floor__item-btn')?.forEach(el => {
+  el.addEventListener('click',() => {
+    const img = el.parentElement.parentElement.querySelector(".floor__item-img").querySelector('img');
+    const src = img.getAttribute('src');
+    document.querySelectorAll(".floor-plan__img").forEach(elem => {
+      elem.setAttribute("src", src)
+    })
+  })
+})
 
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
