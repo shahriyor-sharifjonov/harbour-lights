@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js'
+import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 import { Draggable } from "gsap/dist/Draggable.js";
 
@@ -32,44 +32,41 @@ SmoothScroll({
 
 gsap.registerPlugin(ScrollTrigger, Draggable, ScrollToPlugin);
 
-
 // Preloader
 
-const preloader = document.querySelector('#preloader');
-let weekDay = document.querySelector('.preloader-calendar-week');
-let calendarLogo = document.querySelector('.preloader-calendar-logo');
+const preloader = document.querySelector("#preloader");
+let weekDay = document.querySelector(".preloader-calendar-week");
+let calendarLogo = document.querySelector(".preloader-calendar-logo");
 
-let secWrap = document.querySelector('.preloader-numbers');
-let secspan = document.querySelector('.preloader-numbers .preloader-num');
-let secspans = document.querySelectorAll('.preloader-num');
+let secWrap = document.querySelector(".preloader-numbers");
+let secspan = document.querySelector(".preloader-numbers .preloader-num");
+let secspans = document.querySelectorAll(".preloader-num");
 
-let calHours = document.querySelector('.preloader-calendar-hours');
-let calMinutes = document.querySelector('.preloader-calendar-minutes');
-let calDay = document.querySelector('.preloader-calendar-day');
-let calWeek = document.querySelector('.preloader-calendar-week');
-let calYear = document.querySelector('.preloader-calendar-year');
-
+let calHours = document.querySelector(".preloader-calendar-hours");
+let calMinutes = document.querySelector(".preloader-calendar-minutes");
+let calDay = document.querySelector(".preloader-calendar-day");
+let calWeek = document.querySelector(".preloader-calendar-week");
+let calYear = document.querySelector(".preloader-calendar-year");
 
 let sec = 1;
-const secspanHeight = secspan.clientHeight;
+const secspanHeight = secspan.getBoundingClientRect().height;
 
 while (sec <= 100) {
-    let span = document.createElement('span');
-    span.textContent = sec;
-    span.setAttribute("class", "preloader-num");
-    secWrap.appendChild(span);
-    sec++;
+  let span = document.createElement("span");
+  span.textContent = sec;
+  span.setAttribute("class", "preloader-num");
+  secWrap.appendChild(span);
+  sec++;
 }
 var i = 0;
 window.setInterval(function () {
-    i = i + 1;
-    if (i <= 100) {
-        secWrap.style.transform = `translateY(-${secspanHeight * i}px)`;
-    }
+  i = i + 1;
+  if (i <= 100) {
+    secWrap.style.transform = `translateY(-${secspanHeight * i}px)`;
+  }
 }, 1000);
 
-
-setTimeout(calendarLogo.classList.add('active'), 1000);
+setTimeout(calendarLogo.classList.add("active"), 1000);
 
 // Get Time
 const d = new Date();
@@ -83,45 +80,45 @@ calWeek.innerHTML = week;
 
 let currentDay = d.getDate();
 if (currentDay <= 9) {
-    let exactDay = '0' + currentDay
-    calDay.innerHTML = exactDay;
+  let exactDay = "0" + currentDay;
+  calDay.innerHTML = exactDay;
 } else {
-    calDay.innerHTML = currentDay;
+  calDay.innerHTML = currentDay;
 }
 
 function digitalClock() {
+  var d = new Date();
+  var hours = d.getHours();
+  hours = addZero(hours);
+  var minutes = d.getMinutes();
+  minutes = addZero(minutes);
 
-    var d = new Date();
-    var hours = d.getHours();
-    hours = addZero(hours);
-    var minutes = d.getMinutes();
-    minutes = addZero(minutes);
-
-    calHours.innerHTML = hours;
-    calMinutes.innerHTML = minutes;
+  calHours.innerHTML = hours;
+  calMinutes.innerHTML = minutes;
 }
 
 function addZero(i) {
-    if (i < 10) {
-        i = '0' + i;
-    }
-    return i;
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
 }
 
 setInterval(digitalClock, 1000);
 
-window.addEventListener('load', function (event) {
-    document.body.classList.add('loaded');
+window.addEventListener("load", function (event) {
+  document.body.classList.add("loaded");
 });
-
 
 const tlMenu = gsap.timeline({ paused: true });
 
 const btnToggler = document.querySelector(".menu-nav__menu");
 btnToggler.addEventListener("click", toggleMenu);
 function toggleMenu() {
-  tlMenu.reversed() ? tlMenu.timeScale(1).play() : tlMenu.timeScale(2).reverse();
-  btnToggler.classList.toggle('open')
+  tlMenu.reversed()
+    ? tlMenu.timeScale(1).play()
+    : tlMenu.timeScale(2).reverse();
+  btnToggler.classList.toggle("open");
 }
 tlMenu.reverse();
 
@@ -144,7 +141,7 @@ function scrollToHash(hash, e) {
     gsap.to(window, { duration: 0, scrollTo: elem });
   }
 }
-document.querySelectorAll('a[href]').forEach((a) => {
+document.querySelectorAll("a[href]").forEach((a) => {
   a.addEventListener("click", (e) => {
     scrollToHash(getSamePageAnchor(a), e);
     toggleMenu();
@@ -437,13 +434,18 @@ numberClass?.forEach((el) => {
 });
 
 setTimeout(() => {
-  broshureContainer.classList.add("opening");
-},60000)
+  // broshureContainer.classList.add("opening");
+  var mq = window.matchMedia("(max-width: 992px)");
+  if (mq.matches) {
+    modalFloor.classList.add("modal-opening");
+  } else {
+    broshureContainer.classList.add("opening");
+  }
+}, 40000);
 
 const broshureOpen = document.querySelectorAll(".broshure-open");
 const broshureClose = document.querySelectorAll(".broshure-close");
 const broshureContainer = document.getElementById("broshureContainer");
-
 
 broshureOpen?.forEach((el) => {
   el.addEventListener("click", () => {
@@ -477,32 +479,31 @@ modalFloorClose?.forEach((el) => {
   });
 });
 
+const floorModal = document.getElementById("floor-plan__modal");
 
-const floorModal = document.getElementById('floor-plan__modal')
-
-document.querySelectorAll('.floor-modal__open').forEach(el => {
-  el.addEventListener('click',() => {
-    floorModal.classList.add('floor-plan__opened')
+document.querySelectorAll(".floor-modal__open").forEach((el) => {
+  el.addEventListener("click", () => {
+    floorModal.classList.add("floor-plan__opened");
     body.style.overflowY = "hidden";
-  })
-})
+  });
+});
 
-document.querySelectorAll('.floor-modal__close').forEach(el => {
-  el.addEventListener('click',() => {
-    floorModal.classList.remove('floor-plan__opened')
+document.querySelectorAll(".floor-modal__close").forEach((el) => {
+  el.addEventListener("click", () => {
+    floorModal.classList.remove("floor-plan__opened");
     body.style.overflowY = "auto";
-  })
-})
+  });
+});
 
-document.querySelectorAll('.floor__item-btn')?.forEach(el => {
-  el.addEventListener('click',() => {
-    const dataNumber = el.getAttribute('data-number')
-    const srclnk = 'img/'+dataNumber 
-    document.querySelectorAll(".floor-plan__img").forEach(elem => {
-      elem.setAttribute("src", srclnk)
-    })
-  })
-})
+document.querySelectorAll(".floor__item-btn")?.forEach((el) => {
+  el.addEventListener("click", () => {
+    const dataNumber = el.getAttribute("data-number");
+    const srclnk = "img/" + dataNumber;
+    document.querySelectorAll(".floor-plan__img").forEach((elem) => {
+      elem.setAttribute("src", srclnk);
+    });
+  });
+});
 
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({
@@ -563,9 +564,9 @@ menuBtnActive?.forEach((el) => {
 
 // ======= map
 
-const map = document.querySelector('.bg-map')
+const map = document.querySelector(".bg-map");
 
-map.scrollLeft +=150
+map.scrollLeft += 150;
 
 const maps = () => {
   if (document.querySelectorAll(".map-btn")) {
@@ -583,8 +584,8 @@ const maps = () => {
           content.classList.remove("active");
         });
         el.classList.add("active");
-        el.scrollLeft = 0
-        el.scrollLeft +=150
+        el.scrollLeft = 0;
+        el.scrollLeft += 150;
       });
     });
   }
