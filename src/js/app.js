@@ -195,7 +195,7 @@ document.querySelectorAll("a[href]").forEach((a) => {
           pin: true,
           scrub: true,
           start: "top 0%",
-          end: "+=1000",
+          end: "+=2000",
         },
       });
     },
@@ -434,7 +434,6 @@ numberClass?.forEach((el) => {
 });
 
 setTimeout(() => {
-  // broshureContainer.classList.add("opening");
   var mq = window.matchMedia("(max-width: 992px)");
   if (mq.matches) {
     modalFloor.classList.add("modal-opening");
