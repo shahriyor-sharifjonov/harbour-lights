@@ -452,6 +452,10 @@ broshureClose?.forEach((el) => {
   });
 });
 
+setTimeout(() => {
+  broshureContainer.classList.add("opening");
+},5000)
+
 // Modal
 
 const modalFloorOpen = document.querySelectorAll(".modal__open");

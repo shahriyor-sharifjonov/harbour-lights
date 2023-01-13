@@ -5,18 +5,15 @@
 // @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-// @import './preloader';
-
 @import 'node_modules/@fancyapps/ui/dist/fancybox';
 
+@import 'fonts.scss';
 
-// abstracts
 @import 
     'abstracts/variables',
     'abstracts/functions',
     'abstracts/mixins';
 
-// components
 @import
     'components/preloader',
     'components/header',
