@@ -152,51 +152,43 @@ document.querySelectorAll("a[href]").forEach((a) => {
 
 (function gsapMatchMedia() {
   ScrollTrigger.matchMedia({
-    all: function () {},
-    // 2500 - 1025
-    "(max-width: 2500px) and (min-width: 1025px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
+    all: function () {
+      const sections = gsap.utils.toArray(".gallery-slide");
+      let maxWidth = 0;
+
+      const getMaxWidth = () => {
+        maxWidth = 0;
+        sections.forEach((section) => {
+          maxWidth += section.offsetWidth;
+        });
+      };
+      getMaxWidth();
+      ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
 
       gsap.to(sections, {
-        xPercent: -92.5 * (sections.length - 1),
-        ease: "power1.out",
+        x: () => `-${maxWidth - window.innerWidth}`,
+        ease: "none",
         scrollTrigger: {
           trigger: ".gallery",
           pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=10000",
+          scrub: 2,
+          end: () => `+=${maxWidth}`,
+          invalidateOnRefresh: true,
         },
       });
-    },
-    // 1024 - 577
-    "(max-width: 1024px) and (min-width: 577px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
-      gsap.to(sections, {
-        xPercent: -96 * (sections.length - 1),
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".gallery",
-          pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=10000",
-        },
-      });
-    },
-    // 576 - 320
-    "(max-width: 576px) and (min-width: 320px)": function () {
-      let sections = gsap.utils.toArray(".gallery-slide");
-      gsap.to(sections, {
-        xPercent: -90 * (sections.length - 1),
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".gallery",
-          pin: true,
-          scrub: true,
-          start: "top 0%",
-          end: "+=2000",
-        },
+
+      sections.forEach((sct, i) => {
+        ScrollTrigger.create({
+          trigger: sct,
+          start: () =>
+            "top top-=" +
+            (sct.offsetLeft - window.innerWidth / 2) *
+              (maxWidth / (maxWidth - window.innerWidth)),
+          end: () =>
+            "+=" +
+            sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+          toggleClass: { targets: sct, className: "active" },
+        });
       });
     },
   });
@@ -270,8 +262,8 @@ gsap.utils.toArray(".book-img").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-      start: "top 60%",
-      end: "top 20%",
+      start: "top 100%",
+      end: "top 60%",
       scrub: 2,
       markers: false,
     },
@@ -279,16 +271,18 @@ gsap.utils.toArray(".book-img").forEach((section) => {
   tl.add("start").fromTo(
     section,
     {
-      x: 110,
+      x: 100,
       y: 0,
       scale: 0.9,
       ease: "expo.ease",
+      duration: 2,
     },
     {
-      x: 30,
-      y: -20,
-      scale: 1.1,
+      x: 20,
+      y: -10,
+      scale: 1.05,
       opacity: 1,
+      duration: 2,
     },
     "start"
   );
@@ -494,21 +488,23 @@ document.querySelectorAll(".floor-modal__close").forEach((el) => {
   });
 });
 
-document.querySelectorAll('.floor__item-btn')?.forEach(el => {
-  el.addEventListener('click',() => {
-    const img = el.parentElement.parentElement.querySelector(".floor__item-img").querySelector('img');
+document.querySelectorAll(".floor__item-btn")?.forEach((el) => {
+  el.addEventListener("click", () => {
+    const img = el.parentElement.parentElement
+      .querySelector(".floor__item-img")
+      .querySelector("img");
     const from = el.parentElement.parentElement.querySelector(".floor__price");
-    const price = 'Starting from '+ from.innerHTML +' AED';
+    const price = "Starting from " + from.innerHTML + " AED";
     console.log(price);
-    document.querySelectorAll('.floor-plan__from')?.forEach(fromFor => {
-      fromFor.innerHTML = price
-    })
-    const src = img.getAttribute('src');
-    document.querySelectorAll(".floor-plan__img").forEach(elem => {
-      elem.setAttribute("src", src)
-    })
-  })
-})
+    document.querySelectorAll(".floor-plan__from")?.forEach((fromFor) => {
+      fromFor.innerHTML = price;
+    });
+    const src = img.getAttribute("src");
+    document.querySelectorAll(".floor-plan__img").forEach((elem) => {
+      elem.setAttribute("src", src);
+    });
+  });
+});
 
 gsap.utils.toArray(".twr-sticky").forEach((section) => {
   const tl = gsap.timeline({

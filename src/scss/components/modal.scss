@@ -42,6 +42,12 @@
     @media (max-width: 992px) {
       background-color: #2F3A49;
       max-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 30px;
     }
   }
 
@@ -93,9 +99,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    @media (max-width: 576px) {
-      top: 35px;
-    }
+    // @media (max-width: 576px) {
+    //   top: 25px;
+    // }
   }
 
   &__list {
