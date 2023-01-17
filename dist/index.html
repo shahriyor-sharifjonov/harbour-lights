@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230117102250">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230117111939">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230117102250">
+    <link rel="preload" as="image" href="img/preloader.gif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230117111939">
     <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./files/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./files/favicon/favicon-16x16.png">
@@ -28,25 +29,9 @@
     <meta name="thankyou-repeat-cc" content="Cancelled">
   </head>
   <body id="body">
-        <div class="no-webp">
-          <div class="preloader" id="preloader">
-            <div class="preloader-sekun">
-              <div class="preloader-numbers"><span class="preloader-num">0</span></div>
-            </div>
-            <div class="preloader-calendar">
-              <div class="preloader-calendar-inner">
-                <div class="preloader-calendar-logo"><img src="img/loader-logo.svg" alt="logo" draggable="false"></div>
-                <div style="width: 100%;">
-                  <div class="preloader-calendar-time">
-                    <div class="preloader-calendar-hours">00</div>
-                    <div class="preloader-calendar-minutes">00</div>
-                  </div>
-                  <div class="preloader-calendar-days"><span class="preloader-calendar-day">01</span><span class="preloader-calendar-week">Mon</span><span class="preloader-calendar-year">2023</span></div>
-                </div>
-                <div class="preloader-loading">Content is loading</div>
-              </div>
-            </div>
-          </div>
+        <div class="main-preloader">
+          <div class="main-preloader__img"></div>
+          <picture> <picture><source srcset="img/preloader.webp" type="image/webp"><img src="img/preloader.gif" alt=""></picture></picture>
         </div>
     <div class="wrapper">
             <header id="header">
@@ -1000,6 +985,6 @@
               </div>
             </section>
     </div>
-    <script src="js/app.min.js?_v=20230117102250"> </script>
+    <script src="js/app.min.js?_v=20230117111939"> </script>
   </body>
 </html>
