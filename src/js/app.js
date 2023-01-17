@@ -293,7 +293,7 @@ gsap.utils.toArray(".developerAnim").forEach((section) => {
     scrollTrigger: {
       trigger: section,
       start: "top 80%",
-      end: "top 0%",
+      end: "top 30%",
       scrub: 1,
       markers: false,
     },

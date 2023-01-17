@@ -158,9 +158,9 @@
 }
 
 .floor__tab-item.active {
-    background: #5E7390;
+    background: black;
     color: #fff;
-    border-color: #5E7390;
+    border-color: black;
 }
 
 .floor__item {
@@ -357,4 +357,7 @@
 
 .floor__item-btn path{
     stroke: white;
+}
+.floor__navigation{
+    display: none !important;
 }

@@ -123,7 +123,8 @@
 }
 
 .menu-nav__broshure{
-    padding: 16px 32px;
+    height: 42px;
+    padding: 0 42px;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
@@ -131,6 +132,9 @@
     border: 1px solid white;
     cursor: pointer;
     transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-nav{
@@ -142,7 +146,7 @@
 }
 
 .menu-nav__broshure:hover{
-    color: #5E7390;
+    background-color: #5E7390;
     border-color: #5E7390;
     transition: .2s;
 }
@@ -374,7 +378,6 @@
 
 .menu__logo img{
     width: 220px;
-    margin-bottom: 30px;
 }
 
 .menu__form{
@@ -489,19 +492,14 @@
     justify-content: center;
     align-items: center;
     color: white;
+    &:hover{
+        background-color: #5E7390;
+    }
 }
 
 
 .menu__about-project-btn i{
     font-size: 25px;
-}
-
-.telegram-btn{
-    background-color: #5E7390;
-}
-
-.telegram-btn:hover{
-    background-color: #8091a8;
 }
 
 .about-project-btn svg{
