@@ -453,8 +453,13 @@ broshureClose?.forEach((el) => {
 });
 
 setTimeout(() => {
-  broshureContainer.classList.add("opening");
-},5000)
+  var mq = window.matchMedia("(max-width: 992px)");
+  if (mq.matches) {
+    modalFloor.classList.add("modal-opening");
+  } else {
+    broshureContainer.classList.add("opening");
+  }
+}, 40000);
 
 // Modal
 
@@ -618,39 +623,107 @@ gsap.utils.toArray(".book-container").forEach((section) => {
   );
 });
 
-const bookHeight = document.querySelector(".twr-title").clientHeight / 2;
-
-gsap.utils.toArray(".book-sticky").forEach((section) => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: "150% top",
-      scrub: true,
-      markers: false,
-    },
-  });
-  tl.add("start")
-    .to(
-      section.querySelector(".sticky-bg"),
-      {
-        opacity: 0,
-        scale: 2,
-        duration: 0.4,
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".book-container",
+    start: "top top",
+    end: "bottom bottom",
+    pin: ".sticky-bg",
+  },
+}),
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".book-container",
+        start: "20% top",
+        end: "50% 50%",
+        scrub: 1,
       },
-      "start"
-    )
+    })
+    .to(".sticky-bg-substract", {
+      opacity: 0,
+    }),
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".book-container",
+        start: "top top",
+        end: "30% top",
+        scrub: 1,
+      },
+    })
+    .to(".sticky-bg-substract", {
+      scale: 5,
+    }),
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".book-container",
+        start: "60% bottom",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    })
     .fromTo(
-      section.querySelector(".text"),
+      ".sticky-bg-img",
       {
-        y: bookHeight * 5,
+        opacity: 1,
       },
       {
-        y: -bookHeight + 30,
-      },
-      "start"
+        opacity: 0.3,
+      }
     );
-});
+
+// const tlSubstract = gsap.timeline({
+//   scrollTrigger: {
+//       trigger: ".six-dots",
+//       start: "top top",
+//       end: "bottom bottom",
+//       pin: ".six-dots__section"
+//   }
+// });
+
+// tlPreload.from(
+//   ".preload__logo path",
+//   {
+//     drawSVG: "0% 0%",
+//     duration: 3,
+//   },
+//   0
+// );
+// const bookHeight = document.querySelector(".twr-title").clientHeight / 2;
+
+// gsap.utils.toArray(".book-sticky").forEach((section) => {
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: section,
+//       start: "top top",
+//       end: "150% top",
+//       scrub: true,
+//       markers: false,
+//     },
+//   });
+//   tl.add("start")
+//     .to(
+//       section.querySelector(".sticky-bg"),
+//       {
+//         opacity: 0,
+//         scale: 2,
+//         duration: 0.4,
+//       },
+//       "start"
+//     )
+//     .fromTo(
+//       section.querySelector(".text"),
+//       {
+//         y: bookHeight * 5,
+//       },
+//       {
+//         y: -bookHeight + 30,
+//       },
+//       "start"
+//     );
+// });
 
 gsap.utils.toArray(".book-container").forEach((section) => {
   const tl = gsap.timeline({

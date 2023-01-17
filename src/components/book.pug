@@ -1,15 +1,13 @@
 mixin book() 
     section.book-container 
-        .book-sticky 
-            img(src="@img/book.png") 
-            .toning 
-            .sticky-bg
+        .sticky-bg
+            .sticky-bg-img
                 picture
-                    source(srcset='@img/subtract-2.png' type='image/png')
-                    img(src='@img/subtract-2.png' alt='' draggable='false').desktop
-                picture
-                    source(srcset='@img/subtract-2.2.png' type='image/png')
-                    img(src='@img/subtract-2.2.png' alt='' draggable='false').mobile
-            .text 
-                p PAY 20%
-                | TO BOOK A UNIT
+                    source(srcset='@img/book.png' type='image/png')
+                    img(src='@img/book.png' alt='' draggable='false').desktop
+
+            .sticky-bg-substract
+                img(src="@img/subtract-mob.svg", alt="")
+        .sticky-text 
+            p PAY 20%
+            | TO BOOK A UNIT
